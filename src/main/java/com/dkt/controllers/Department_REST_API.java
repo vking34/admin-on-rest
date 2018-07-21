@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.Resources;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -36,10 +37,10 @@ public class Department_REST_API {
         this.departmentRepository = departmentRepository;
     }
 
-
     // get all departments
 
     @GetMapping
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<Department> getAllDepartments(){
         System.out.println("REST-API: GET all departments...");
         List<Department> departments = departmentRepository.findAll();
@@ -89,6 +90,15 @@ public class Department_REST_API {
 
     }
 
+    // get a department by id
+    @GetMapping("/{id}")
+    public Department getDepartmentByID(@PathVariable int id){
+
+        Department department = departmentRepository.findDepartmentByDepartmentID(id);
+
+        return department;
+    }
+
     // edit an existing department
     @PutMapping("/{id}")
     public resp editDepartment(@PathVariable int id ,@RequestBody Map<String, String> newInfo){
@@ -115,6 +125,21 @@ public class Department_REST_API {
 //        return departments.deleteDepartmentById(id);
         departmentRepository.deleteByDepartmentID(id);
         return new resp(true);
+    }
+
+    @GetMapping(value = "/search/", produces = {"application/hal+json"})
+    public List<Department> findDepartmentsByTitle(@RequestParam String title)
+    {
+        System.out.println("searching " + title + " ...");
+        List<Department> departments ;
+
+        if(title == null){
+            departments = departmentRepository.findAll();
+        }else {
+            departments = departmentRepository.findDepartmentsByTitle(title);
+        }
+
+        return departments;
     }
 
 
@@ -209,6 +234,7 @@ public class Department_REST_API {
             return new resp(false);
         }
     }
+
 
 
 

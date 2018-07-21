@@ -13,8 +13,9 @@ ReactDOM.render(
         <Title>Department List</Title>
         <br/>
 
-            <Search text="Search by title"/>
+
         <Provider store={store}>
+
             <List/>
         </Provider>
     </div>,

@@ -1,6 +1,7 @@
 var React = require('react');
 var Department = require('./Department');
 var Options = require('./Options');
+var Search = require('./Search');
 import { getDepartments, createDepartment, removeDepartment } from "../../actions/actions";
 import {connect} from 'react-redux';
 
@@ -26,6 +27,7 @@ class List extends React.Component{
     render(){
         return(
             <div>
+                <Search/>
                 <div>{this.props.text}</div>
                 <div className="row">
                     <div className="col-xs-1" style={{backgroundColor: "lavender"}}>Order</div>
