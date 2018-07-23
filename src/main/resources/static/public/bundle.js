@@ -2205,7 +2205,7 @@ function defineRefPropWarningGetter(props, displayName) {
 /**
  * Factory method to create a new React element. This no longer adheres to
  * the class pattern, so do not use new to call it. Also, no instanceof check
- * will work. Instead test $$typeof field against Symbol.for('react.element') to check
+ * will work. Instead test $$typeof fields against Symbol.for('react.element') to check
  * if something is a React Element.
  *
  * @param {*} type
@@ -6179,13 +6179,13 @@ var propTypes = {
     if (!props[propName] || hasReadOnlyValue[props.type] || props.onChange || props.readOnly || props.disabled) {
       return null;
     }
-    return new Error('You provided a `value` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultValue`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+    return new Error('You provided a `value` prop to a form fields without an ' + '`onChange` handler. This will render a read-only fields. If ' + 'the fields should be mutable use `defaultValue`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
   },
   checked: function (props, propName, componentName) {
     if (!props[propName] || props.onChange || props.readOnly || props.disabled) {
       return null;
     }
-    return new Error('You provided a `checked` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+    return new Error('You provided a `checked` prop to a form fields without an ' + '`onChange` handler. This will render a read-only fields. If ' + 'the fields should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
   },
   onChange: PropTypes.func
 };
@@ -12043,7 +12043,7 @@ return new F();
       name = String(name);
     }
     if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(name)) {
-      throw new TypeError('Invalid character in header field name')
+      throw new TypeError('Invalid character in header fields name')
     }
     return name.toLowerCase()
   }
@@ -14732,7 +14732,7 @@ var ReactCompositeComponent = {
   /**
    * Assert that the context types are valid
    *
-   * @param {object} typeSpecs Map of context field to a ReactPropType
+   * @param {object} typeSpecs Map of context fields to a ReactPropType
    * @param {object} values Runtime values that need to be type-checked
    * @param {string} location e.g. "prop", "context", "child context"
    * @private

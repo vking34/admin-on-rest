@@ -1,8 +1,8 @@
 module.exports = {
-    entry: './src/main/resources/static/js/app.js',
+    entry: './src/main/resources/static/js/index.js',
     output: {
         path: __dirname,
-        filename: './src/main/resources/static/public/bundle.js'
+        filename: './src/main/resources/static/public/admin.bundle.js'
     },
     module: {
         loaders: [

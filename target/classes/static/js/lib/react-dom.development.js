@@ -3223,13 +3223,13 @@ var ReactControlledValuePropTypes = {
       if (!props[propName] || hasReadOnlyValue[props.type] || props.onChange || props.readOnly || props.disabled) {
         return null;
       }
-      return new Error('You provided a `value` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultValue`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+      return new Error('You provided a `value` prop to a form fields without an ' + '`onChange` handler. This will render a read-only fields. If ' + 'the fields should be mutable use `defaultValue`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
     },
     checked: function (props, propName, componentName) {
       if (!props[propName] || props.onChange || props.readOnly || props.disabled) {
         return null;
       }
-      return new Error('You provided a `checked` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+      return new Error('You provided a `checked` prop to a form fields without an ' + '`onChange` handler. This will render a read-only fields. If ' + 'the fields should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
     }
   };
 
@@ -16075,7 +16075,7 @@ function commitRoot(finishedWork) {
   startCommitTimer();
 
   var root = finishedWork.stateNode;
-  !(root.current !== finishedWork) ? invariant_1(false, 'Cannot commit the same tree as before. This is probably a bug related to the return field. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  !(root.current !== finishedWork) ? invariant_1(false, 'Cannot commit the same tree as before. This is probably a bug related to the return fields. This error is likely caused by a bug in React. Please file an issue.') : void 0;
   var committedExpirationTime = root.pendingCommitExpirationTime;
   !(committedExpirationTime !== NoWork) ? invariant_1(false, 'Cannot commit an incomplete root. This error is likely caused by a bug in React. Please file an issue.') : void 0;
   root.pendingCommitExpirationTime = NoWork;
@@ -16276,7 +16276,7 @@ function completeUnitOfWork(workInProgress) {
   while (true) {
     // The current, flushed, state of this fiber is the alternate.
     // Ideally nothing should rely on this, but relying on it here
-    // means that we don't need an additional field on the work in
+    // means that we don't need an additional fields on the work in
     // progress.
     var current = workInProgress.alternate;
     {
@@ -16418,7 +16418,7 @@ function completeUnitOfWork(workInProgress) {
 function performUnitOfWork(workInProgress) {
   // The current, flushed, state of this fiber is the alternate.
   // Ideally nothing should rely on this, but relying on it here
-  // means that we don't need an additional field on the work in
+  // means that we don't need an additional fields on the work in
   // progress.
   var current = workInProgress.alternate;
 

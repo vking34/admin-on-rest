@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/rest-api/users")
                 .hasRole("ADMIN")
-//                .antMatchers(HttpMethod.GET,"/rest-api/departments").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.GET,"/rest-api/departments").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.POST,"/rest-api/departments").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.GET,"/rest-api/departments/**").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.PUT,"/rest-api/departments/**").hasRole("ADMIN")
@@ -48,4 +48,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(customUserDetailService).passwordEncoder(new BCryptPasswordEncoder());
     }
+
+
 }

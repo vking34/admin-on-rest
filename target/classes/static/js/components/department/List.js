@@ -41,9 +41,8 @@ class List extends React.Component{
 
                 <div>
                     {this.props.departments.map((department, i) =>
-                        <Department key={i} ord={i} info={department}  />
-                    )
-                    }
+                        <Department key={i} ord={i} info={department} />
+                    )}
                 </div>
                 <Options />
             </div>

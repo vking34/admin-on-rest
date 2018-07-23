@@ -1,10 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Provider} = require('react-redux');
-var List = require('./components/department/List');
-var Title = require('./components/department/Title');
-var Search = require('./components/department/Search');
-var store = require('./store/department_store');
+var List = require('../components/department/List');
+var Title = require('../components/department/Title');
+var Search = require('../components/department/Search');
+var store = require('../store/department_store');
 
 
 
