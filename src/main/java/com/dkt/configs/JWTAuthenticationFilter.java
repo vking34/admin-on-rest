@@ -11,6 +11,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -22,7 +23,9 @@ import java.io.IOException;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import static com.dkt.configs.SecurityConstants.*;
 
@@ -57,9 +60,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         ZonedDateTime expirationTimeUTC = ZonedDateTime.now(ZoneOffset.UTC).plus(SecurityConstants.EXPIRATION_TIME, ChronoUnit.MILLIS);
 
+        User user = (User) authResult.getPrincipal();
+        String role = user.getAuthorities().iterator().next().toString();
+
         String token = Jwts
                 .builder()
-                .setSubject( ((User) authResult.getPrincipal()).getUsername())
+                .setSubject(user.getUsername())
+                .setId(role)
                 .setExpiration(Date.from(expirationTimeUTC.toInstant()))
                 .signWith(SignatureAlgorithm.HS256, SecurityConstants.SECRET)
                 .compact();

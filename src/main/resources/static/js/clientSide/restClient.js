@@ -7,6 +7,7 @@ import {
     UPDATE,
     DELETE,
     fetchUtils,
+    showNotificationAction
 } from 'admin-on-rest';
 
 import { stringify } from 'query-string';
@@ -14,16 +15,15 @@ import { stringify } from 'query-string';
 const API_URL = 'http://localhost/rest-api';
 
 const convertRESTRequestToHTTP =  (type, resource, params) => {
-    //
-    // if(localStorage.getItem('token') === null){
-    //     return Promise.reject();
-    // }
 
     let url = '';
     const options = {};
     options.headers = new Headers({ Accept: 'application/json' });
     const token = localStorage.getItem('token');
-    options.headers.set('Authorization', `Bearer ${token}`);
+
+    if(token !== null){
+        options.headers.set('Authorization', `Bearer ${token}`);
+    }
 
     switch (type){
 
@@ -49,7 +49,8 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         case UPDATE: {
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'PUT';
-            options.body = JSON.stringify(params.data);
+            let payload = {title: params.data.title, sub_title: params.data.sub_title};
+            options.body = JSON.stringify(payload);
             break;
         }
 
@@ -72,12 +73,6 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
     switch (type) {
         case GET_LIST:
         {
-            // let i = -1;
-            // const list = json.map(x => {
-            //     i++;
-            //     return { ...x, id: i}
-            // });
-
             return {
                 data: json.map(x => {
                         return { ...x, id: x.department_id}
@@ -86,7 +81,19 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
             };
         }
         case CREATE:
-            return { data: { ...params.data, id: json.id } };
+        {
+            console.log(json);
+            if(json.status === true){
+                return { data: { ...params.data, id: params.data.department_id } };
+            } else{
+                // Promise.reject("Department ID may exist");
+                // alert("Department ID may exist");
+                // return;
+                // showNotification("Department ID may exist");
+                showNotificationAction("Department ID may exist");
+            }
+        }
+
         default:
             return { data: json };
     }
