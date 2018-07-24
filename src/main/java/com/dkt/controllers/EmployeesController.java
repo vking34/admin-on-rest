@@ -16,10 +16,10 @@ import org.springframework.hateoas.Resources;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-@RequestMapping("rest-api/employees")
+//@RestController
+//@RequestMapping("rest-api/employees")
 
-@EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
+//@EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
 
 public class EmployeesController {
 

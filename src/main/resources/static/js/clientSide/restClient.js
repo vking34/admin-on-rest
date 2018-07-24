@@ -12,7 +12,7 @@ import {
 
 import { stringify } from 'query-string';
 
-const API_URL = 'http://localhost/rest-api';
+const API_URL = 'http://localhost';
 
 const convertRESTRequestToHTTP =  (type, resource, params) => {
 
@@ -49,7 +49,7 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         case UPDATE: {
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'PUT';
-            let payload = {title: params.data.title, sub_title: params.data.sub_title};
+            let payload = {password: params.data.password, admin: params.data.admin, active: params.data.active};
             options.body = JSON.stringify(payload);
             break;
         }
@@ -75,7 +75,7 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
         {
             return {
                 data: json.map(x => {
-                        return { ...x, id: x.department_id}
+                        return { ...x, id: x.username}
                     }),
                 total: json.length
             };
@@ -84,7 +84,7 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
         {
             console.log(json);
             if(json.status === true){
-                return { data: { ...params.data, id: params.data.department_id } };
+                return { data: { ...params.data, id: params.data.username } };
             } else{
                 // Promise.reject("Department ID may exist");
                 // alert("Department ID may exist");
@@ -93,6 +93,8 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
                 showNotificationAction("Department ID may exist");
             }
         }
+
+
 
         default:
             return { data: json };

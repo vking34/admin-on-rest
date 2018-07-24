@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "user")
+@Document(collection = "Users")
 public class AppUser {
 
     @Id
@@ -20,11 +20,21 @@ public class AppUser {
     @Field("admin")
     private boolean admin;
 
+    @Field("active")
+    private boolean active;
+
     public AppUser(){}
 
     public AppUser(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public AppUser(String username, String password, boolean admin, boolean active) {
+        this.username = username;
+        this.password = password;
+        this.admin = admin;
+        this.active = active;
     }
 
     public String getId() {
@@ -59,4 +69,11 @@ public class AppUser {
         this.admin = admin;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 }

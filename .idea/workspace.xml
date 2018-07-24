@@ -123,6 +123,14 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/EmployeesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/EmployeesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/mongoDBSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/mongoDBSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Search.js" afterDir="false" />
@@ -133,7 +141,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/public/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/react/departments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/react/departments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/controllers/Department_REST_API.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/controllers/Department_REST_API.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/controllers/DepartmentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/controllers/DepartmentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/controllers/EmployeesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/controllers/EmployeesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/controllers/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/controllers/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/controllers/reactExamplesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/controllers/reactExamplesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/mongoDBSeeder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryCustom.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/components/department/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/components/department/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/components/department/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/components/department/Search.js" afterDir="false" />
@@ -174,47 +190,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JWTAuthenticationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthenticationFilter.java">
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+            <state relative-caret-position="127">
+              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomUserDetailService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/services/CustomUserDetailService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JWTAuthorizationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthorizationFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="229" selection-start-line="13" selection-start-column="229" selection-end-line="13" selection-end-column="229" />
+            <state relative-caret-position="324">
+              <caret line="18" column="101" lean-forward="true" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -222,56 +214,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Department_REST_API.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java">
+      <file leaf-file-name="User_REST_API.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/User_REST_API.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="1566">
+              <caret line="99" column="69" lean-forward="true" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="54">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConfig.java">
+      <file leaf-file-name="DepartmentRepositoryCustom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepositoryCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authClient.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js">
+      <file leaf-file-name="DepartmentRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#24#104#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="departments.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/departments.js">
+      <file leaf-file-name="PasswordEncoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/User/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -279,11 +271,8 @@
       <file leaf-file-name="restClient.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="92" column="66" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#149#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="486">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -333,14 +322,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/react/redux_example.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/NoteForm.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/Note.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/addingReducers.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/arrReducer.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/store/redux_store.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/List.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/department/Title.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/ex2/list.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/addDepartment.js" />
@@ -349,7 +330,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/editText.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/reducer.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/reducers/reducers.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/store/department_store.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/department/Department.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/actions/actions.js" />
@@ -360,13 +340,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/react/departments.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/User/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthorizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/AppUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/services/CustomUserDetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/User_REST_API.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/admin_bunble.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/posts.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/admin_app.js" />
@@ -378,12 +352,27 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/authenClient.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/authClient.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/App.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/departments.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepositoryCustom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/EmployeesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/services/CustomUserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/mongoDBSeeder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/AppUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/User/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/users.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/User_REST_API.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/App.js" />
       </list>
     </option>
   </component>
@@ -419,10 +408,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="867" />
-    <option name="height" value="1053" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="769" />
+    <option name="y" value="50" />
+    <option name="width" value="950" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -433,6 +423,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -491,7 +483,63 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="passingObjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="Department" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
@@ -507,6 +555,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
@@ -541,8 +598,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,11 +770,14 @@
       <workItem from="1532327564565" duration="14273000" />
       <workItem from="1532356856919" duration="8470000" />
       <workItem from="1532400234026" duration="10293000" />
+      <workItem from="1532414165510" duration="1974000" />
+      <workItem from="1532422082665" duration="6849000" />
+      <workItem from="1532440956102" duration="4739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273652000" />
+    <option name="totallyTimeSpent" value="287214000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,7 +789,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="769" y="50" width="950" height="789" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -744,12 +802,12 @@
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32968128" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40215716" />
       <window_info anchor="bottom" id="Spring" order="16" weight="0.32909605" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.18055555" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.38026607" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32894737" />
       <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -764,53 +822,53 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Logcat" order="11" />
       <window_info anchor="right" id="Preview" order="6" />
-      <window_info anchor="bottom" id="Java Enterprise" order="17" />
+      <window_info id="Captures" order="8" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.32885906" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.40285715" />
-      <window_info id="Captures" order="8" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32885906" />
       <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.12288135" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Java Enterprise" order="17" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.12288135" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3319209" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3319209" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="16" weight="0.32909605" />
       <window_info id="Image Layers" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27710843" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Web" order="9" side_tool="true" />
+      <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info id="Favorites" order="6" sideWeight="0.5020161" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
+      <window_info id="Captures" order="8" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3274918" />
       <window_info anchor="right" id="Preview" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="7" side_tool="true" />
-      <window_info id="Captures" order="8" />
       <window_info anchor="bottom" id="Java Enterprise" order="17" />
       <window_info anchor="bottom" id="Logcat" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32968128" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.32885906" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.16452992" />
-      <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3274918" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
+      <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -832,41 +890,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/Note.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/List.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/others/Hello.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/public/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/react/redux_example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/department/Title.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -878,13 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -944,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/store/redux_store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -983,61 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/User/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/AppUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/User_REST_API.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,89 +1076,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/EmployeesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/DepartmentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="92" column="66" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#149#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="33" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/reactExamplesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/services/CustomUserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="672">
+          <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="284">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/departments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/mongoDBSeeder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/AppUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
+        <state relative-caret-position="774">
           <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepositoryCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/Department/DepartmentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/User/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Department_REST_API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/User_REST_API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="99" column="69" lean-forward="true" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
-            <element signature="e#24#104#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="229" selection-start-line="13" selection-start-column="229" selection-end-line="13" selection-end-column="229" />
+        <state relative-caret-position="324">
+          <caret line="18" column="101" lean-forward="true" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/departments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

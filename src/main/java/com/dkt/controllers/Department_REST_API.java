@@ -21,8 +21,8 @@ import java.util.Map;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-@RestController
-@RequestMapping("rest-api/departments")
+//@RestController
+//@RequestMapping("rest-api/departments")
 public class Department_REST_API {
     public static final String url = "/rest-api/departments";
 

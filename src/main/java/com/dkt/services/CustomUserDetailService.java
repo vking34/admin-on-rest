@@ -26,12 +26,21 @@ public class CustomUserDetailService implements UserDetailsService {
         System.out.println("Search user from DB...");
         AppUser user = Optional.ofNullable(userRepository.findUserByUsername(username)).orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-        List<GrantedAuthority> adminAuthority = AuthorityUtils.createAuthorityList("ROLE_ADMIN");
-        List<GrantedAuthority> userAuthority = AuthorityUtils.createAuthorityList("ROLE_USER");
-
         System.out.println(user.getUsername());
 
-        return new User(user.getUsername(), user.getPassword(), user.isAdmin() ? adminAuthority : userAuthority );
+        List<GrantedAuthority> authorities;
+
+        if(user.isAdmin()){
+            if(user.getUsername().equals("root")){
+                authorities = AuthorityUtils.createAuthorityList("ROLE_ROOT");
+            }else {
+                authorities = AuthorityUtils.createAuthorityList("ROLE_ADMIN");
+            }
+        }else {
+            authorities = AuthorityUtils.createAuthorityList("ROLE_USER");
+        }
+
+        return new User(user.getUsername(), user.getPassword(), authorities );
     }
 
 }

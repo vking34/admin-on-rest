@@ -52,7 +52,6 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-
     }
 
     @Override

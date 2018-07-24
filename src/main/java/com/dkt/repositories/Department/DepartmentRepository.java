@@ -12,7 +12,7 @@ import org.springframework.data.domain.Page;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+//@Repository
 public interface DepartmentRepository extends MongoRepository<Department, String>, DepartmentRepositoryCustom {
     public void deleteByDepartmentID(int id);
     public Department findDepartmentByDepartmentID(int id);

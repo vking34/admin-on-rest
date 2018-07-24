@@ -29,9 +29,9 @@ import java.util.List;
 import java.util.Map;
 
 //@RestController
-@Controller
-@RequestMapping("departments")
-@EnableHypermediaSupport(type = HypermediaType.HAL)
+//@Controller
+//@RequestMapping("departments")
+//@EnableHypermediaSupport(type = HypermediaType.HAL)
 public class DepartmentsController {
     public static final String url = "/departments";
     final PageRequest defaultPageRequest = new PageRequest(0 ,4);
