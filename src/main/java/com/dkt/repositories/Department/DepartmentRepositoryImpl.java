@@ -1,11 +1,9 @@
 package com.dkt.repositories.Department;
 
-import com.dkt.models.Department;
+import com.dkt.models.examples.Department;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.stereotype.Repository;
 import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;

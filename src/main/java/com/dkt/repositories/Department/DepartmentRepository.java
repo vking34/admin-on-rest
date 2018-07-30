@@ -1,15 +1,9 @@
 package com.dkt.repositories.Department;
 
-import com.dkt.models.Department;
-import com.dkt.models.Employee;
-import org.springframework.data.domain.PageRequest;
+import com.dkt.models.examples.Department;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.data.domain.Page;
-import java.util.ArrayList;
+
 import java.util.List;
 
 //@Repository

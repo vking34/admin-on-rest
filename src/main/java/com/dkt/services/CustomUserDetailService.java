@@ -1,7 +1,7 @@
 package com.dkt.services;
 
 import com.dkt.models.AppUser;
-import com.dkt.repositories.User.UserRepository;
+import com.dkt.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -39,6 +39,8 @@ public class CustomUserDetailService implements UserDetailsService {
         }else {
             authorities = AuthorityUtils.createAuthorityList("ROLE_USER");
         }
+
+//        authorities = user.isAdmin() ? user.getUsername().equals("root") ? AuthorityUtils.createAuthorityList("ROLE_ROOT") : AuthorityUtils.createAuthorityList("ROLE_ADMIN") : AuthorityUtils.createAuthorityList("ROLE_USER");
 
         return new User(user.getUsername(), user.getPassword(), authorities );
     }

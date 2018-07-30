@@ -1,26 +1,29 @@
 import React from 'react';
-import { List, Edit, Create, Datagrid, BooleanInput, BooleanField, TextField, ReferenceField, NumberField, NumberInput, EditButton, DeleteButton, DisabledInput, LongTextInput, ReferenceInput, required, SelectInput, SimpleForm, TextInput } from 'admin-on-rest';
+import { List, Edit, Create, Datagrid, BooleanInput, BooleanField, TextField, ReferenceField, NumberField, NumberInput, EditButton, DeleteButton, DisabledInput, LongTextInput, ReferenceInput, required, SelectInput, SimpleForm, TextInput, Filter } from 'admin-on-rest';
 
 export const UserList = (props) => (
 
-    <List {...props}>
+    <List {...props} filters={<UsersFilter />}>
 
         <Datagrid>
-
-            <NumberField source="username" />
-            <TextField source="password" />
+            <TextField source="username" />
+            {/*<TextField source="password" />*/}
             <BooleanField source="admin" />
             <BooleanField source="active" />
             <EditButton />
             <DeleteButton />
         </Datagrid>
-
     </List>
 );
 
+const UsersFilter = (props) => (
+    <Filter {...props}>
+        <TextInput label="Search" source="q" alwaysOn />
+    </Filter>
+);
 
 const UserTitle = ({ record }) => {
-    return <span>Edit { record ? `"${record.username}"` : '' }</span>
+    return <span>Edit user: { record ? `${record.username}` : '' }</span>
 };
 
 export const UserEdit = (props) => (

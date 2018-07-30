@@ -1,12 +1,5 @@
 package com.dkt;
 
-import com.dkt.models.Department;
-import com.dkt.models.Employee;
-import com.dkt.repositories.Department.DepartmentRepository;
-import com.dkt.repositories.Employee.EmployeeRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-
 //@Component
 //public class mongoDBSeeder implements CommandLineRunner {
 //

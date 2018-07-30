@@ -1,6 +1,6 @@
 package com.dkt.repositories.Employee;
 
-import com.dkt.models.Employee;
+import com.dkt.models.examples.Employee;
 import com.mongodb.WriteResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

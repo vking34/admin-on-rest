@@ -13,6 +13,9 @@ import {
 import { stringify } from 'query-string';
 
 const API_URL = 'http://localhost';
+let bizweb_stores_resource = "bizweb-stores";
+let users_resource = "users";
+let pages_resource = "pages";
 
 const convertRESTRequestToHTTP =  (type, resource, params) => {
 
@@ -28,14 +31,62 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
     switch (type){
 
         case GET_LIST : {
-            const { page, perPage } = params.pagination;
-            const { field, order } = params.sort;
-            url = `${API_URL}/${resource}`;
+
+            // console.log(typeof(resource));
+            console.log(resource , params);
+
+            let pageRequest = params.pagination.page - 1;
+            console.log(params.pagination.page);
+            console.log(params.filter.q);
+            if(typeof params.filter.q !== "undefined"){
+                console.log(true);
+                switch (resource){
+                    case bizweb_stores_resource : {
+                        url = `${API_URL}/${resource}/filter/?alias=${params.filter.q}&&page=${pageRequest}`;
+                        break;
+                    }
+
+                    case users_resource : {
+                        url = `${API_URL}/${resource}/filter/?username=${params.filter.q}&&page=${pageRequest}`;
+                        break;
+                    }
+
+                    case pages_resource: {
+                        url = `${API_URL}/${resource}/filter/?name=${params.filter.q}&&page=${pageRequest}`;
+                        break;
+                    }
+                }
+
+            }else {
+                console.log(false);
+                url = `${API_URL}/${resource}/?page=${pageRequest}`;
+            }
+
             break;
         }
 
         case GET_ONE: {
-            url = `${API_URL}/${resource}/${params.id}`;
+
+            // switch (resource){
+            //     case bizweb_stores_resource : {
+            //         url = `${API_URL}/${resource}/?page=${pageRequest}`;
+            //         break;
+            //     }
+            //     case users_resource : {
+                    url = `${API_URL}/${resource}/${params.id}`;
+                //     break;
+                // }
+            // }
+
+            break;
+        }
+
+        case GET_MANY_REFERENCE: {
+
+            console.log(type, resource, params);
+            let pageRequest = params.pagination.page - 1;
+            url = `${API_URL}/${params.target}/${params.id}/${resource}?page=${pageRequest}`;
+
             break;
         }
 
@@ -49,7 +100,18 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         case UPDATE: {
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'PUT';
-            let payload = {password: params.data.password, admin: params.data.admin, active: params.data.active};
+
+            switch (resource){
+                case bizweb_stores_resource:{
+                    let payload = {password: params.data.password, admin: params.data.admin, active: params.data.active};
+                    break;
+                }
+                case users_resource:{
+                    let payload = {HasUpdate: params.data.HasUpdate};
+                    break;
+                }
+            }
+
             options.body = JSON.stringify(payload);
             break;
         }
@@ -73,13 +135,56 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
     switch (type) {
         case GET_LIST:
         {
-            return {
-                data: json.map(x => {
-                        return { ...x, id: x.username}
-                    }),
-                total: json.length
-            };
+            switch (resource){
+                case bizweb_stores_resource : {
+                    return {
+                        data: json.content.map(x => {
+                            return { ...x, id: x.alias}
+                        }),
+                        total: json.totalElements
+                    }
+                }
+
+                case users_resource : {
+                    return {
+                        data: json.content.map(x => {
+                            return { ...x, id: x.username}
+                        }),
+                        total: json.totalElements
+                    };
+                }
+
+                case pages_resource: {
+                    return {
+                        data: json.content.map(x => {
+                            return {...x, id: x.id}
+                        }),
+                        total: json.totalElements
+                    }
+                }
+            }
         }
+
+        // case GET_MANY: {
+        //     const query = {
+        //         filter: JSON.stringify({ id: params.ids }),
+        //     };
+        //     url = `${API_URL}/${resource}?${stringify(query)}`;
+        //     break;
+        // }
+
+        case GET_MANY_REFERENCE : {
+
+            return {
+              data : json.content.map(x => {
+                  return {...x, id: x.id}
+              }),
+              total: json.totalElements
+            };
+
+            break;
+        }
+
         case CREATE:
         {
             console.log(json);
@@ -93,7 +198,6 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
                 showNotificationAction("Department ID may exist");
             }
         }
-
 
 
         default:

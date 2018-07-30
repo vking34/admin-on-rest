@@ -1,7 +1,6 @@
 package com.dkt.repositories.Department;
 
-import com.dkt.models.Department;
-import org.springframework.stereotype.Repository;
+import com.dkt.models.examples.Department;
 
 import java.util.List;
 

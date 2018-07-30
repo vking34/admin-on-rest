@@ -39,7 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasRole("ROOT")
                 .antMatchers(HttpMethod.DELETE, "/users/**")
                 .hasRole("ROOT")
-                
+                .antMatchers(HttpMethod.GET, "/bizweb-stores/**")
+                .hasAnyRole("ADMIN", "USER")
+
 //                .antMatchers(HttpMethod.GET,"/rest-api/departments").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.POST,"/rest-api/departments").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.GET,"/rest-api/departments/**").hasAnyRole("USER", "ADMIN")
