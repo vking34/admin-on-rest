@@ -2,8 +2,9 @@
 import { AUTH_LOGOUT, AUTH_LOGIN, AUTH_ERROR, AUTH_CHECK, AUTH_GET_PERMISSIONS } from 'admin-on-rest';
 import decodeJwt from 'jwt-decode';
 
-export default (type, params) => {
+export default (type, params, location) => {
     if (type === AUTH_LOGIN) {
+        console.log(type, params, location);
         const { username, password } = params;
         const request = new Request('http://localhost/login', {
             method: 'POST',

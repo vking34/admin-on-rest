@@ -33,6 +33,7 @@ public class BizwebStore {
 
     @Field("PageIds")
     private List<String> pageIds;
+//    private String[] pageIds;
 
     @Field("PackageInfo")
     private PackageInfo packageInfo;
@@ -52,17 +53,6 @@ public class BizwebStore {
     @Field("BwChannels")
     private String bwChannels;
 
-    @Field("StoreId")
-    private int storeId;
-
-    public int getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
-    }
-
     public String getId() {
         return id;
     }
@@ -70,7 +60,6 @@ public class BizwebStore {
     public void setId(String id) {
         this.id = id;
     }
-
 
     public String getAlias() {
         return alias;
@@ -111,6 +100,14 @@ public class BizwebStore {
     public void setPageIds(List<String> pageIds) {
         this.pageIds = pageIds;
     }
+
+//    public String[] getPageIds() {
+//        return pageIds;
+//    }
+//
+//    public void setPageIds(String[] pageIds) {
+//        this.pageIds = pageIds;
+//    }
 
     public PackageInfo getPackageInfo() {
         return packageInfo;

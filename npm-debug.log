@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'redux-from',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.21
+3 info using node@v8.11.2
+4 warn package.json SpringREST_2@1.0.0 No description
+5 warn package.json SpringREST_2@1.0.0 No README data
+6 warn package.json chain-function@1.0.0 No README data
+7 warn package.json jsesc@1.3.0 No README data
+8 warn package.json react-transition-group@1.2.1 No README data
+9 warn package.json setimmediate@1.0.5 No README data
+10 warn package.json esutils@2.0.2 No license field.
+11 warn package.json regenerator-transform@0.10.1 license should be a valid SPDX license expression
+12 warn package.json regjsparser@0.1.5 license should be a valid SPDX license expression
+13 verbose readDependencies using package.json deps
+14 verbose cache add [ 'redux-from', null ]
+15 verbose cache add name=undefined spec="redux-from" args=["redux-from",null]
+16 verbose parsed url Url {
+16 verbose parsed url   protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'redux-from',
+16 verbose parsed url   path: 'redux-from',
+16 verbose parsed url   href: 'redux-from' }
+17 silly lockFile 964aa6cb-redux-from redux-from
+18 verbose lock redux-from /root/.npm/964aa6cb-redux-from.lock
+19 silly lockFile 964aa6cb-redux-from redux-from
+20 silly lockFile 964aa6cb-redux-from redux-from
+21 verbose addNamed [ 'redux-from', '' ]
+22 verbose addNamed [ null, '*' ]
+23 silly lockFile e5389769-redux-from redux-from@
+24 verbose lock redux-from@ /root/.npm/e5389769-redux-from.lock
+25 silly addNameRange { name: 'redux-from', range: '*', hasData: false }
+26 verbose request where is /redux-from
+27 verbose request registry https://registry.npmjs.org/
+28 verbose request id 5859fc7bc8e67341
+29 verbose url raw /redux-from
+30 verbose url resolving [ 'https://registry.npmjs.org/', './redux-from' ]
+31 verbose url resolved https://registry.npmjs.org/redux-from
+32 verbose request where is https://registry.npmjs.org/redux-from
+33 info trying registry request attempt 1 at 11:31:40 AM
+34 http GET https://registry.npmjs.org/redux-from
+35 http 404 https://registry.npmjs.org/redux-from
+36 verbose headers { date: 'Mon, 06 Aug 2018 04:31:41 GMT',
+36 verbose headers   'content-type': 'application/json',
+36 verbose headers   'content-length': '21',
+36 verbose headers   connection: 'close',
+36 verbose headers   'set-cookie':
+36 verbose headers    [ '__cfduid=da41f35369231466a1795644cce233d101533529900; expires=Tue, 06-Aug-19 04:31:40 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'cf-cache-status': 'MISS',
+36 verbose headers   'cf-ray': '445ec676ba418520-HKG',
+36 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+36 verbose headers   vary: 'accept-encoding, accept',
+36 verbose headers   server: 'cloudflare' }
+37 silly registry.get cb [ 404,
+37 silly registry.get   { date: 'Mon, 06 Aug 2018 04:31:41 GMT',
+37 silly registry.get     'content-type': 'application/json',
+37 silly registry.get     'content-length': '21',
+37 silly registry.get     connection: 'close',
+37 silly registry.get     'set-cookie':
+37 silly registry.get      [ '__cfduid=da41f35369231466a1795644cce233d101533529900; expires=Tue, 06-Aug-19 04:31:40 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+37 silly registry.get     'cache-control': 'max-age=300',
+37 silly registry.get     'cf-cache-status': 'MISS',
+37 silly registry.get     'cf-ray': '445ec676ba418520-HKG',
+37 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+37 silly registry.get     vary: 'accept-encoding, accept',
+37 silly registry.get     server: 'cloudflare' } ]
+38 silly lockFile e5389769-redux-from redux-from@
+39 silly lockFile e5389769-redux-from redux-from@
+40 error Error: Not found : redux-from
+40 error     at RegClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:300:14)
+40 error     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:238:65)
+40 error     at Request.self.callback (/usr/lib/nodejs/request/index.js:148:22)
+40 error     at emitTwo (events.js:126:13)
+40 error     at Request.emit (events.js:214:7)
+40 error     at Request.<anonymous> (/usr/lib/nodejs/request/index.js:896:14)
+40 error     at emitOne (events.js:121:20)
+40 error     at Request.emit (events.js:211:7)
+40 error     at IncomingMessage.<anonymous> (/usr/lib/nodejs/request/index.js:847:12)
+40 error     at emitNone (events.js:111:20)
+41 error If you need help, you may report this *entire* log,
+41 error including the npm and node versions, at:
+41 error     <http://github.com/npm/npm/issues>
+42 error System Linux 4.14.0-kali1-amd64
+43 error command "/usr/bin/node" "/usr/bin/npm" "install" "redux-from" "--save"
+44 error cwd /root/IdeaProjects/web-spring-mvc
+45 error node -v v8.11.2
+46 error npm -v 1.4.21
+47 verbose exit [ 1, true ]

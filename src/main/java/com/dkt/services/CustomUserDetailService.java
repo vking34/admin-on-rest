@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,10 +26,15 @@ public class CustomUserDetailService implements UserDetailsService {
         // in createAuthority, must include "ROLE_" in front of role name.
         System.out.println("Search user from DB...");
         AppUser user = Optional.ofNullable(userRepository.findUserByUsername(username)).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        if(!user.isActive()){
+            throw new UsernameNotFoundException("User: " + user.getUsername() +" not active");
+        }
 
         System.out.println(user.getUsername());
 
         List<GrantedAuthority> authorities;
+
+        System.out.println("granting...");
 
         if(user.isAdmin()){
             if(user.getUsername().equals("root")){

@@ -19,7 +19,12 @@ public interface FbPageRepository extends MongoRepository<FbPage, String> {
 
     public FbPage findPageById(String id);
 
-    @Query(value = "{ StoreId : ?0 }")
-    public Page<FbPage> findPagesBelongToStore(int storeId, Pageable pageable);
+    public void deletePageById(String id);
 
+//    @Query(value = "{ StoreId : ?0 }")
+//    public Page<FbPage> findPagesBelongToStore(int storeId, Pageable pageable);
+
+    public Page<FbPage> findFbPagesByIdIn(List<String> pageIds, Pageable pageable);
+
+    public List<FbPage> findFbPagesByIdIn(List<String> pageIds);
 }

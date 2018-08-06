@@ -34,16 +34,16 @@ public class FbPage {
     @Field("WebhookStatus")
     private String webhookStatus;
 
-    @Field("StoreId")
-    private int storeId;
-
-    public int getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
-    }
+//    @Field("StoreId")
+//    private int storeId;
+//
+//    public int getStoreId() {
+//        return storeId;
+//    }
+//
+//    public void setStoreId(int storeId) {
+//        this.storeId = storeId;
+//    }
 
     public String getId() {
         return id;
