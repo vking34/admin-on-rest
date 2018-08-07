@@ -39,7 +39,7 @@ public class BizwebStoresController {
     private AccountRepository accountRepository;
 
     @GetMapping("/")
-    public Page<BizwebStore> getBizwebStoresPage(@RequestParam int page)
+    public Page<BizwebStore> getStoresPage(@RequestParam int page)
     {
         System.out.println("GET: List BizwebStores page " + page);
         PageRequest pageRequest = new PageRequest(page, 10);
@@ -56,7 +56,7 @@ public class BizwebStoresController {
 
 
     @GetMapping("/{id}")
-    public BizwebStore getOneBizwebStore(@PathVariable String id){
+    public BizwebStore getOneStore(@PathVariable String id){
         System.out.println("GET: One BizwebStore " + id);
         Collection grantedAuthorities = SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 //        System.out.println(grantedAuthorities);
@@ -73,8 +73,23 @@ public class BizwebStoresController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public resp deleteStore(@PathVariable String id){
+        System.out.println("DELETE: BizwebStore " + id);
+        bizwebStoreRepository.deleteBizwebStoreById(id);
+        return new resp(true);
+    }
+
+    @GetMapping("/filter/")
+    public Page<BizwebStore> filterStoreByAlias(@RequestParam("alias") String alias, @RequestParam("page") int page){
+        System.out.println("GET: Filter BizwebStores by alias " + alias);
+        PageRequest pageRequest = new PageRequest(page, 10);
+
+        return bizwebStoreRepository.findBizwebStoresByAlias(alias, pageRequest);
+    }
+
     @GetMapping("/{id}/pages")
-    public Page<FbPage> getPagesFromBizwebStore(@PathVariable String id, @RequestParam int page){
+    public Page<FbPage> getPagesFromStore(@PathVariable String id, @RequestParam int page){
         System.out.println("GET: Pages belong to " + id);
         BizwebStore bizwebStore = bizwebStoreRepository.findBizwebStoreById(id);
         if(bizwebStore == null){
@@ -86,7 +101,7 @@ public class BizwebStoresController {
     }
 
     @GetMapping("/{id}/accounts")
-    public Page<StoreAccount> getAccountsFromBizwebStore(@PathVariable String id, @RequestParam int page){
+    public Page<StoreAccount> getAccountsFromStore(@PathVariable String id, @RequestParam int page){
         System.out.println("GET: Accounts from Bizweb Store " + id);
         try{
             BizwebStore store = bizwebStoreRepository.findBizwebStoreById(id);
@@ -116,21 +131,29 @@ public class BizwebStoresController {
         }
     }
 
-    @GetMapping("/filter/")
-    public Page<BizwebStore> filterBizwebStoreByAlias(@RequestParam("alias") String alias, @RequestParam("page") int page){
-        System.out.println("GET: Filter BizwebStores by alias " + alias);
-        PageRequest pageRequest = new PageRequest(page, 10);
-
-        return bizwebStoreRepository.findBizwebStoresByAlias(alias, pageRequest);
+    @DeleteMapping("/{storeId}/accounts/{accountId}")
+    public resp deleteAccountFromStore(@PathVariable("storeId") String storeId, @PathVariable("accountId") String accountId){
+        System.out.println("DELETE: Account " + accountId + " from store " + storeId);
+        BizwebStore bizwebStore = bizwebStoreRepository.findBizwebStoreById(storeId);
+        if (bizwebStore != null){
+            try{
+                List<String> accountIds = bizwebStore.getAccountIds();
+                for(int i = 0; i < accountIds.size(); i++){
+                    if(accountIds.get(i).equals(accountId)){
+                        accountIds.remove(i);
+                        bizwebStore.setAccountIds(accountIds);
+                        bizwebStoreRepository.save(bizwebStore);
+                        return new resp(true);
+                    }
+                }
+                return new resp(false);
+            }
+            catch (Exception e){
+                return new resp(false);
+            }
+        }
+        else {
+            return new resp(false);
+        }
     }
-
-    @DeleteMapping("/{id}")
-    public resp deleteBizwebStore(@PathVariable String id){
-        System.out.println("DELETE: BizwebStore " + id);
-        bizwebStoreRepository.deleteBizwebStoreById(id);
-        return new resp(true);
-    }
-
-
-
 }

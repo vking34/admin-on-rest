@@ -1,11 +1,14 @@
 package com.dkt.models;
 
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "Users")
+@JsonAutoDetect(getterVisibility = JsonAutoDetect.Visibility.NONE)
 public class AppUser {
 
     @Id
@@ -37,6 +40,7 @@ public class AppUser {
         this.active = active;
     }
 
+    @JsonProperty("id")
     public String getId() {
         return id;
     }
@@ -45,6 +49,7 @@ public class AppUser {
         this.id = id;
     }
 
+    @JsonProperty("username")
     public String getUsername() {
         return username;
     }
@@ -53,6 +58,7 @@ public class AppUser {
         this.username = username;
     }
 
+    @JsonProperty("password")
     public String getPassword() {
         return password;
     }
@@ -61,6 +67,7 @@ public class AppUser {
         this.password = password;
     }
 
+    @JsonProperty("admin")
     public boolean isAdmin() {
         return admin;
     }
@@ -69,6 +76,7 @@ public class AppUser {
         this.admin = admin;
     }
 
+    @JsonProperty("active")
     public boolean isActive() {
         return active;
     }

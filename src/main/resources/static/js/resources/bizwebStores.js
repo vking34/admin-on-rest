@@ -38,6 +38,7 @@ import {
 import {dateFormatter, dateParser} from "../functions/dateConverter";
 import AccessToken from "../components/tokenField";
 import PagesField from "../fields/PagesField";
+import DeleteAccountButton from "../components/deleteAccountFromStore";
 
 
 const cardActionStyle = {
@@ -154,6 +155,7 @@ export const BizwebStoreEdit = (props) => (
                     <TextField label="Account Name" source="accountName"/>
                     {/*<TextField label="Page Name" source="pageName" />*/}
                     <PagesField />
+                    <DeleteAccountButton />
                 </Datagrid>
             </ReferenceManyField>
         </FormTab>

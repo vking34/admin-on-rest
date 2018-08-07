@@ -34,8 +34,8 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         case GET_LIST : {
 
             // console.log(typeof(resource));
-            // console.log(resource , params);
-
+            console.log(type, resource , params);
+        
             let pageRequest = params.pagination.page - 1;
             // console.log(params.pagination.page);
             // console.log(params.filter.q);
@@ -84,6 +84,7 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         }
 
         case CREATE: {
+
             url = `${API_URL}/${resource}`;
             options.method = 'POST';
             options.body = JSON.stringify(params.data);
@@ -96,18 +97,18 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'PUT';
 
+            var payload = {};
+
             switch (resource){
                 case bizweb_stores_resource:{
-                    let payload = {
-                        password: params.data.password,
-                        admin: params.data.admin,
-                        active: params.data.active
+                    payload = {
+                        HasUpdate: params.data.HasUpdate
                     };
                     break;
                 }
 
                 case pages_resource: {
-                    let payload = {
+                    payload = {
                         facebookPageId: params.data.facebookPageId,
                         createdOn: params.data.createdOn,
                         accountMaps: params.data.accountMaps
@@ -116,17 +117,16 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
                 }
 
                 case users_resource:{
-                    let payload = {
-                        HasUpdate: params.data.HasUpdate
+                    payload = {
+                        password: params.data.password,
+                        admin: params.data.admin,
+                        active: params.data.active
                     };
                     break;
                 }
-
-                default : {
-                    let payload = {};
-                }
             }
 
+            console.log(payload);
             options.body = JSON.stringify(payload);
             break;
         }
@@ -151,25 +151,11 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
     switch (type) {
         case GET_LIST:
         {
-            switch (resource){
-
-                case users_resource : {
-                    return {
-                        data: json.content.map(x => {
-                            return { ...x, id: x.username}
-                        }),
-                        total: json.totalElements
-                    };
-                }
-
-                default : {
-                    return {
-                        data: json.content.map(x => {
-                            return {...x, id: x.id}
-                        }),
-                        total: json.totalElements
-                    }
-                }
+            return {
+                data: json.content.map(x => {
+                    return {...x, id: x.id}
+                }),
+                total: json.totalElements
             }
         }
 
@@ -182,17 +168,15 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
         // }
 
         case GET_MANY_REFERENCE : {
-
+            console.log(type, resource, params);
             return json !== null
-            ?{
+            ? {
               data : json.content.map(x => {
-                  return {...x, id: x.id}
+                  return {...x, id: x.id, parent: params.id}
               }),
               total: json.totalElements
             }
             : null ;
-
-            break;
         }
 
         case CREATE:
@@ -201,12 +185,16 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
             if(json.status === true){
                 return { data: { ...params.data, id: params.data.username } };
             } else{
-
-                showNotificationAction("Department ID may exist");
+                alert("User exists");
             }
-            break;
         }
 
+        case UPDATE:
+        {
+            return {
+                data: { ...params.data, id: params.id }
+            };
+        }
 
         default:
             // console.log(json);

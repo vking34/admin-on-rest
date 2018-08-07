@@ -4,6 +4,7 @@ package com.dkt.controllers;
 import com.dkt.models.AppUser;
 import com.dkt.passingObjects.resp;
 import com.dkt.repositories.UserRepository;
+import org.bson.types.ObjectId;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,7 +36,8 @@ public class UsersController {
         System.out.println("GET: All users");
         PageRequest pageRequest = new PageRequest(page, 10);
 
-        return userRepository.findAll(pageRequest);
+//        return userRepository.findAll(pageRequest);
+        return userRepository.findAllNotCludingPassword(pageRequest);
     }
 
     // create a user
@@ -72,30 +74,42 @@ public class UsersController {
         }
     }
 
-    // get one user
-    @GetMapping("/{username}")
-    public AppUser getOneUser(@PathVariable String username){
-        return userRepository.findUserByUsername(username);
+    // get user by username
+    @GetMapping("/{id}")
+    public AppUser getOneUser(@PathVariable String id){
+        System.out.println("GET: One User " + id);
+        ObjectId objectId = new ObjectId(id);
+        return userRepository.findUserByUsernameNotCludingPassword(objectId);
     }
 
-    // delete user
-    @DeleteMapping("/{username}")
-    public resp deleteUser(@PathVariable String username){
 
-        userRepository.deleteUserByUsername(username);
+    // delete user
+    @DeleteMapping("/{id}")
+    public resp deleteUser(@PathVariable String id){
+        System.out.println("DELETE: user " + id);
+        userRepository.deleteUserById(id);
         return new resp(true);
     }
 
     // update user
-    @PutMapping("/{username}")
-    public resp updateUser(@PathVariable String username,@RequestBody Map<String, String> info){
-
-        AppUser appUser = userRepository.findUserByUsername(username);
+    @PutMapping("/{id}")
+    public resp updateUser(@PathVariable String id,@RequestBody Map<String, String> info){
+        System.out.println("UPDATE: user " + id);
+        AppUser appUser = userRepository.findUserById(id);
+        System.out.println(info.toString());
 
         if(appUser != null){
+            try{
+                String newPass = info.get("password");
+                if(newPass != null){
+                    if(!newPass.equals(appUser.getPassword())){
+                        appUser.setPassword(passwordEncoder.encode(newPass));
+                    }
+                }
 
-            if(!info.get("password").equals(appUser.getPassword())){
-                appUser.setPassword(passwordEncoder.encode(info.get("password")));
+            }
+            catch (Exception e){
+                System.out.println(e.getMessage());
             }
 
             try{

@@ -24,17 +24,17 @@ public class CustomUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // in createAuthority, must include "ROLE_" in front of role name.
-        System.out.println("Search user from DB...");
+//        System.out.println("Search user from DB...");
         AppUser user = Optional.ofNullable(userRepository.findUserByUsername(username)).orElseThrow(() -> new UsernameNotFoundException("User not found"));
         if(!user.isActive()){
             throw new UsernameNotFoundException("User: " + user.getUsername() +" not active");
         }
 
-        System.out.println(user.getUsername());
+//        System.out.println(user.getUsername());
 
         List<GrantedAuthority> authorities;
 
-        System.out.println("granting...");
+//        System.out.println("granting...");
 
         if(user.isAdmin()){
             if(user.getUsername().equals("root")){

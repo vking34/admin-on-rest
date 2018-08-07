@@ -40,7 +40,7 @@ public class AccountsController {
     }
 
     @DeleteMapping("/{id}")
-    public resp deleteBizwebStore(@PathVariable String id){
+    public resp deleteAccountById(@PathVariable String id){
         System.out.println("DELETE: Account " + id);
         accountRepository.deleteAccountById(id);
         return new resp(true);

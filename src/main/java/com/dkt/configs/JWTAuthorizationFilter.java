@@ -50,10 +50,17 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         String token = request.getHeader(HEADER_STRING);
         if(token == null)
             return null;
-        String username = Jwts.parser().setSigningKey(SECRET)
-                .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
-                .getBody()
-                .getSubject();
+
+        String username = null;
+        try {
+             username = Jwts.parser().setSigningKey(SECRET)
+                    .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
+                    .getBody()
+                    .getSubject();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
         UserDetails userDetails = customUserDetailService.loadUserByUsername(username);
 //        AppUser appUser = customUserDetailService.loadUserFromDataBaseByUsername(username);
