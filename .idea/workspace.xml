@@ -139,14 +139,33 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Employee/EmployeeRepositoryCustom.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dkt/repositories/Employee/EmployeeReposityImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/actions/actions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/babel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/lib/babel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/browser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/lib/browser.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/react-dom.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/lib/react-dom.development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/react.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/lib/react.development.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Department.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/List.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/department/Title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/ex1/ex1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/ex2/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/others/Hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/others/hoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/others/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/List.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/Note.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/components/redux_example/NoteForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/babel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/browser.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/react-dom.development.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/react-router-dom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/lib/react.development.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reducers/addingReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reducers/arrReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reducers/editDepartment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reducers/editText.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reducers/reducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/department_store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/redux_store.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/public/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/public/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/react/departments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/react/departments.html" afterDir="false" />
@@ -161,11 +180,12 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/models/Employee.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/models/Employees.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/mongoDBSeeder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeReposityImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeReposityImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryCustom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Department/DepartmentRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeRepositoryCustom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dkt/repositories/Employee/EmployeeReposityImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/actions/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/components/department/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/components/department/List.js" afterDir="false" />
@@ -239,7 +259,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1638">
-              <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -251,16 +271,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customerList.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customerList.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/customerList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -268,11 +288,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restClient.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="restClient.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
             </state>
           </provider>
         </entry>
@@ -314,7 +334,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="103" column="16" lean-forward="true" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="49" />
+              <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -613,16 +633,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="clientSide" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -883,12 +893,12 @@
       <workItem from="1533796608827" duration="9897000" />
       <workItem from="1533867904215" duration="6806000" />
       <workItem from="1533874849755" duration="3472000" />
-      <workItem from="1533882657255" duration="7490000" />
+      <workItem from="1533882657255" duration="7927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="518553000" />
+    <option name="totallyTimeSpent" value="518990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +911,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32858709" />
@@ -1032,13 +1041,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/BizwebStoreRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/repositories/FbPageRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1365,16 +1367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/customerList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/tokenField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1392,7 +1384,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="103" column="16" lean-forward="true" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="49" />
+          <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="49" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1402,7 +1394,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1638">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1419,14 +1411,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/react-redux/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/customerList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
