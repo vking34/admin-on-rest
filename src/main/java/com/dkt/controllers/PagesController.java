@@ -28,6 +28,7 @@ public class PagesController {
     @Autowired
     private AccountRepository accountRepository;
 
+
     @GetMapping("/")
     public Page<FbPage> getPages(@RequestParam int page)
     {
@@ -35,14 +36,6 @@ public class PagesController {
         PageRequest pageRequest = new PageRequest(page, 10);
         return fbPageRepository.findAll(pageRequest);
     }
-
-//    @GetMapping("/belong/")
-//    public Page<FbPage> getPagesBelongToStore(@RequestParam int storeId, @RequestParam int page){
-//        System.out.println("GET: List Pages belong to StoreID " + storeId);
-//        PageRequest pageRequest = new PageRequest(page, 25);
-//        return fbPageRepository.findPagesBelongToStore(storeId, pageRequest);
-//    }
-
 
     @GetMapping("/{id}")
     public FbPage getOnePage(@PathVariable String id){
@@ -57,14 +50,20 @@ public class PagesController {
         return new resp(true);
     }
 
+    @GetMapping("/filter/")
+    public Page<FbPage> filterPageByName(@RequestParam("name") String name, @RequestParam("page") int page){
+        System.out.println("GET: Filter Page by alias " + name);
+        PageRequest pageRequest = new PageRequest(page, 10);
+
+        return fbPageRepository.findPagesByName(name, pageRequest);
+    }
+
     @GetMapping("/{id}/accounts")
     public Page<AccountMap> getAccountsInPage(@PathVariable String id, @RequestParam int page){
         System.out.println("GET: Accounts in Page: " + id);
 
         FbPage fbPage = fbPageRepository.findPageById(id);
-
         List<AccountMap> accountMapList = fbPage.getAccountMaps();
-//        List<String> accounts = new ArrayList<String>();
 
         accountMapList.forEach(e -> {
             try {
@@ -76,26 +75,29 @@ public class PagesController {
             }
         });
 
-//        PageRequest pageRequest = new PageRequest(page, 25);
-//
-//        Page<Account> result = accountRepository.findAccountsByIdIn(accounts, pageRequest);
-//
-//        List<Account> accountList = result.getContent();
-
-
         return new PageImpl<>(accountMapList);
     }
 
+    @DeleteMapping("/{pageId}/accounts/{accountId}")
+    public resp deleteAccountFromPage(@PathVariable("pageId") String pageId, @PathVariable("accountId") String accountId){
+        System.out.println("DELETE: Account " + accountId + " from Page " + pageId);
+        FbPage fbPage = fbPageRepository.findPageById(pageId);
 
-    @GetMapping("/filter/")
-    public Page<FbPage> filterPageByName(@RequestParam("name") String name, @RequestParam("page") int page){
-        System.out.println("GET: Filter Page by alias " + name);
-        PageRequest pageRequest = new PageRequest(page, 10);
+        if(fbPage != null){
+            List<AccountMap> accounts = fbPage.getAccountMaps();
+            for(int i = 0; i < accounts.size(); i++){
+                if(accounts.get(i).getAccountId().equals(accountId)){
+                    accounts.remove(i);
+                    fbPage.setAccountMaps(accounts);
+                    fbPageRepository.save(fbPage);
+                    return new resp(true);
+                }
+            }
 
-        return fbPageRepository.findPagesByName(name, pageRequest);
+            return new resp(false);
+        }else {
+            return new resp(false);
+        }
     }
-
-
-
 
 }

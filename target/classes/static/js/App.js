@@ -17,10 +17,12 @@ import {
 import {PageCreate, PageEdit, PageList} from "./resources/pages";
 import {AccountCreate, AccountEdit, AccountList} from "./resources/accounts";
 import Login from "./Login";
+import Dashboard from "./components/Dashboard";
 
 const App = () => (
     <Admin
         title="Sapo Social Admin"
+        dashboard={Dashboard}
         restClient={myApiRestClient}
         authClient={authClient}
         loginPage={Login}
@@ -28,12 +30,12 @@ const App = () => (
         {permissions => [
             permissions === 'ROLE_ROOT'
                 ? <Resource name="users" list={UserList} create={UserCreate} edit={UserEdit} remove={Delete} icon={UsersIcon} />
-                : <Resource name="bizweb-stores" list={permissions === 'ROLE_ADMIN' ? BizwebStoreList : SupportBizwebStoreList} remove={Delete} edit={BizwebStoreEdit} icon={StoreIcon} />,
+                : <Resource name="bizweb-stores" list={BizwebStoreList} remove={Delete} edit={BizwebStoreEdit} icon={StoreIcon} />,
             permissions !== 'ROLE_ROOT'
-                ? <Resource name="pages" list={PageList} edit={PageEdit} remove={Delete} create={PageCreate} icon={PagesIcon} />
+                ? <Resource name="pages" list={PageList} edit={PageEdit} remove={Delete} icon={PagesIcon} />
                 : null,
             permissions !== 'ROLE_ROOT'
-                ? <Resource name="accounts" list={AccountList} edit={AccountEdit} remove={Delete} create={AccountCreate} icon={AccountIcon} />
+                ? <Resource name="accounts" list={AccountList} edit={AccountEdit} remove={Delete} icon={AccountIcon} />
                 : null
         ]
         }

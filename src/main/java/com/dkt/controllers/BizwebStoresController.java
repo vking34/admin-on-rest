@@ -1,16 +1,19 @@
 package com.dkt.controllers;
 
 
-import com.dkt.models.Account;
-import com.dkt.models.BizwebStore;
-import com.dkt.models.FbPage;
-import com.dkt.models.StoreAccount;
+import com.dkt.models.*;
 import com.dkt.passingObjects.resp;
 import com.dkt.repositories.AccountRepository;
 import com.dkt.repositories.BizwebStoreRepository;
 import com.dkt.repositories.FbPageRepository;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import jdk.nashorn.internal.parser.JSONParser;
 import org.bson.types.ObjectId;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.GsonJsonParser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +26,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -53,8 +57,6 @@ public class BizwebStoresController {
         }
     }
 
-
-
     @GetMapping("/{id}")
     public BizwebStore getOneStore(@PathVariable String id){
         System.out.println("GET: One BizwebStore " + id);
@@ -70,6 +72,26 @@ public class BizwebStoresController {
             System.out.println(role);
             ObjectId obj = new ObjectId(id);
             return bizwebStoreRepository.findBizwebStoreNotIncludingToken(obj);
+        }
+    }
+
+    @PutMapping(value = "/{id}", consumes = "application/json", produces = "application/json")
+    public resp updateStore(@PathVariable String id,@RequestBody Map<String, Object> info){
+        System.out.println("UPDATE: Store " + id);
+        BizwebStore store = bizwebStoreRepository.findBizwebStoreById(id);
+
+        if(store != null){
+            JSONObject json = new JSONObject(info);
+            if(!store.getAlias().equals(json.getString("alias")))
+                store.setAlias(json.getString("alias"));
+            Gson gson = new Gson();
+            PackageInfo packageInfo = gson.fromJson(json.getJSONObject("packageInfo").toString(), PackageInfo.class);
+            store.setPackageInfo(packageInfo);
+            bizwebStoreRepository.save(store);
+            return new resp(true);
+        }
+        else {
+            return new resp(false);
         }
     }
 
@@ -142,6 +164,32 @@ public class BizwebStoresController {
                     if(accountIds.get(i).equals(accountId)){
                         accountIds.remove(i);
                         bizwebStore.setAccountIds(accountIds);
+                        bizwebStoreRepository.save(bizwebStore);
+                        return new resp(true);
+                    }
+                }
+                return new resp(false);
+            }
+            catch (Exception e){
+                return new resp(false);
+            }
+        }
+        else {
+            return new resp(false);
+        }
+    }
+
+    @DeleteMapping("/{storeId}/pages/{pageId}")
+    public resp deletePageFromStore(@PathVariable("storeId") String storeId, @PathVariable("pageId") String pageId){
+        System.out.println("DELETE: Page " + pageId + " from store " + storeId);
+        BizwebStore bizwebStore = bizwebStoreRepository.findBizwebStoreById(storeId);
+        if (bizwebStore != null){
+            try{
+                List<String> pageIds = bizwebStore.getPageIds();
+                for(int i = 0; i < pageIds.size(); i++){
+                    if(pageIds.get(i).equals(pageId)){
+                        pageIds.remove(i);
+                        bizwebStore.setPageIds(pageIds);
                         bizwebStoreRepository.save(bizwebStore);
                         return new resp(true);
                     }

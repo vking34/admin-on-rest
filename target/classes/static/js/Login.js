@@ -62,8 +62,7 @@ class Login extends Component {
 
     login = ({ username, password }) => {
         const { userLogin, location } = this.props;
-        console.log(location);
-        userLogin({ username, password }, location.state ? '/users' : location.nextPathname);
+        userLogin({ username, password}, location.state ? location.state.nextPathname : null);
     };
 
     render() {

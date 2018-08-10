@@ -33,6 +33,7 @@ import {
 import {dateFormatter, dateParser} from "../functions/dateConverter";
 import MsgList from "../components/msgList";
 import CustomerList from "../components/customerList";
+import DeletePageButton from "../components/deletePageFromAccount";
 
 export const AccountList = (props) => (
     <List {...props} filters={<AccountFilter />}>
@@ -57,7 +58,7 @@ const AccountTitle = ( {record}) => {
 };
 
 const BizwebCustomerMapField = ({ record = {}} ) =>
-        <CustomerList customers={record.bizwebCustomerMaps} />;
+        <CustomerList customers={record.bizwebCustomerMaps ? record.bizwebCustomerMaps : null} />;
 BizwebCustomerMapField.defaultProps= { label: 'Bizweb Customer Maps'};
 
 const MessengerPlatformIdField = ({ record = {}} ) =>
@@ -66,46 +67,49 @@ MessengerPlatformIdField.defaultProps= { label: 'Messenger Platform IDs'};
 
 export const AccountEdit = (props) => (
     <Edit title={<AccountTitle />} {...props}>
-        <TabbedForm>
-            <FormTab label="Basic Info">
-                <TextField label="ID" source="id"/>
-                <TextField label="Name" source="name" />
-                <TextField label="FB-User-ID" source="facebookUserId" />
-                <TextInput label="access-token" source="accessToken" />
+        {perrmissions =>
+            <TabbedForm>
+                <FormTab label="Basic Info">
+                    <TextField label="ID" source="id"/>
+                    <TextField label="Name" source="name"/>
+                    <TextField label="FB-User-ID" source="facebookUserId"/>
+                    { permissions === 'ROLE_ADMIN' && <TextField label="access-token" source="accessToken"/>}
+                    <TextField label="Created On" source="createdOn"/>
+                    <TextField label="Modified On" source="modifiedOn"/>
+                    {/*<DateInput label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />*/}
+                    {/*<DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
+                </FormTab>
 
-                <DateInput label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />
-                <DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />
-            </FormTab>
+                <FormTab label="Page Maps">
+                    <ReferenceManyField addLabel={false} reference="pages" target="accounts">
+                        <Datagrid>
+                            <TextField label="ID" source="id"/>
+                            <TextField source="name"/>
+                            <TextField label="FB-Page-ID" source="facebookPageId"/>
+                            <EditButton/>
+                            <DeletePageButton/>
+                        </Datagrid>
+                    </ReferenceManyField>
+                </FormTab>
 
-            <FormTab label="Page Maps">
-                <ReferenceManyField addLabel={false} reference="pages" target="accounts">
-                    <Datagrid>
-                        <TextField label="ID" source="id" />
-                        <TextField source="name"/>
-                        <TextField label="FB-Page-ID" source="facebookPageId" />
-                        <EditButton />
-                        <DeleteButton />
-                    </Datagrid>
-                </ReferenceManyField>
-            </FormTab>
+                <FormTab label="Bizweb-CustomerMaps">
+                    <BizwebCustomerMapField source="bizwebCustomerMaps"/>
+                </FormTab>
 
-            <FormTab label="Bizweb-CustomerMaps" >
-                <BizwebCustomerMapField source="bizwebCustomerMaps" />
-            </FormTab>
+                <FormTab label="Messenger-Platform-IDs">
+                    <MessengerPlatformIdField source="messengerPlatformIds"/>
+                </FormTab>
 
-            <FormTab label="Messenger-Platform-IDs">
-                <MessengerPlatformIdField source="messengerPlatformIds" />
-            </FormTab>
-
-        </TabbedForm>
+            </TabbedForm>
+        }
     </Edit>
 );
 
-export const AccountCreate = (props) => {
-    <Create {...props} redirect="list" >
-        <SimpleForm>
-            <TextInput label="Name" source="name" />
-
-        </SimpleForm>
-    </Create>
-};
+// export const AccountCreate = (props) => {
+//     <Create {...props} redirect="list" >
+//         <SimpleForm>
+//             <TextInput label="Name" source="name" />
+//
+//         </SimpleForm>
+//     </Create>
+// };

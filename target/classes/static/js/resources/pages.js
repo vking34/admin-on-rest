@@ -32,22 +32,26 @@ import {
 } from 'admin-on-rest';
 
 import {dateFormatter, dateParser} from "../functions/dateConverter";
+import DeleteAccountButton from "../components/deleteAccountFromPage";
+import AccessToken from "../components/tokenGridField";
 
 export const PageList = (props) => (
     <List {...props} filters={<PageFilter/>}>
-        <Datagrid>
-            <TextField label="ID" source="id"/>
-            <TextField source="name"/>
-            <TextField label="FB Page ID" source="facebookPageId"/>
-            <EditButton />
-            <DeleteButton />
-        </Datagrid>
+        {permissions =>
+            <Datagrid>
+                <TextField label="ID" source="id"/>
+                <TextField source="name"/>
+                <TextField label="FB Page ID" source="facebookPageId"/>
+                <EditButton/>
+                { permissions === 'ROLE_ADMIN' && <DeleteButton/>}
+            </Datagrid>
+        }
     </List>
 );
 
 const PageFilter = (props) => (
     <Filter {...props}>
-        <TextInput label="Search by name" source="q" alwaysOn />
+        <TextInput label="Search by Name" source="q" alwaysOn />
     </Filter>
 );
 
@@ -55,42 +59,45 @@ const PageTitle = ( {record}) => {
     return <span>Edit page: { record ? `${record.name}` : ''} </span>
 };
 
+const AccessTokenField = ({ record = {} }) =>
+    <AccessToken token={record.access_token}/>;
+AccessTokenField.defaultProps = { label: 'FB-Access-Token'};
+
 export const PageEdit = (props) => (
     <Edit title={<PageTitle/>} {...props}>
-        <TabbedForm >
-            <FormTab label="Basic Info" >
-                <TextField label="ID" source="id"/>
-                <TextField label="FB Page ID" source="facebookPageId" />
-                <TextInput label="Name" source="name" />
-                <DateInput label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />
-                {/*<DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
-                <TextField label="Modified On" source="modifiedOn" />
-            </FormTab>
+        {permissions =>
+            <TabbedForm>
+                <FormTab label="Basic Info">
+                    <TextField label="ID" source="id"/>
+                    <TextField label="FB Page ID" source="facebookPageId"/>
+                    <TextField label="Name" source="name"/>
+                    <TextField label="Created On" source="createdOn"/>
+                    <TextField label="Modified On" source="modifiedOn"/>
+                    {/*<DateInput label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />*/}
+                    {/*<DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
+                </FormTab>
 
-            <FormTab label="account-maps">
-
-                    {/*<TextField label="ID" source="accountMaps.accountId"/>*/}
-                    {/*<TextField label="Access-Token" source="accountMaps.accessToken"/>*/}
+                <FormTab label="account-maps">
                     <ReferenceManyField addLabel={false} reference="accounts" target="pages">
                         <Datagrid>
-                            {/*<FunctionField label="ID" render={ record => `${record.}`} />*/}
-                            <TextField label="ID" source="id" />
+                            <TextField label="ID" source="id"/>
                             <TextField source="name"/>
-                            <TextField label="Page-Acces-Token" source="access_token" />
-                            <EditButton />
-                            <DeleteButton />
+                            { permissions === 'ROLE_ADMIN' && <AccessTokenField source="access_token"/>}
+                            <EditButton/>
+                            { permissions === 'ROLE_ADMIN' && <DeleteAccountButton/>}
                         </Datagrid>
                     </ReferenceManyField>
-            </FormTab>
-        </TabbedForm>
+                </FormTab>
+            </TabbedForm>
+        }
     </Edit>
 );
 
-export const PageCreate = (props) => {
-    <Create {...props} redirect="list" >
-        <SimpleForm>
-            <TextInput label="Name" source="name" />
-            <TextInput label="FB Page ID" source="facebookPageId" />
-        </SimpleForm>
-    </Create>
-};
+// export const PageCreate = (props) => {
+//     <Create {...props} redirect="list" >
+//         <SimpleForm>
+//             <TextInput label="Name" source="name" />
+//             <TextInput label="FB Page ID" source="facebookPageId" />
+//         </SimpleForm>
+//     </Create>
+// };

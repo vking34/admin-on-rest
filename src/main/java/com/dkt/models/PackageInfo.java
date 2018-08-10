@@ -1,54 +1,69 @@
 package com.dkt.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
+
 public class PackageInfo {
 
-    private String PackageName;
-    private int AdminLimit;
-    private int PageLimit;
-    private List<String> Scopes;
+    @Field("PackageName")
+    private String packageName;
+
+    @Field("AdminLimit")
+    private int adminLimit;
+
+    @Field("PageLimit")
+    private int pageLimit;
+
+    @Field("Scopes")
+    private List<String> scopes;
 
     public PackageInfo(){}
 
     public PackageInfo(String packageName, int adminLimit, int pageLimit, List<String> scopes) {
-        PackageName = packageName;
-        AdminLimit = adminLimit;
-        PageLimit = pageLimit;
-        Scopes = scopes;
+        this.packageName = packageName;
+        this.adminLimit = adminLimit;
+        this.pageLimit = pageLimit;
+        this.scopes = scopes;
     }
 
     public String getPackageName() {
-        return PackageName;
+        return packageName;
     }
 
     public void setPackageName(String packageName) {
-        PackageName = packageName;
+        this.packageName = packageName;
     }
 
     public int getAdminLimit() {
-        return AdminLimit;
+        return adminLimit;
     }
 
     public void setAdminLimit(int adminLimit) {
-        AdminLimit = adminLimit;
+        this.adminLimit = adminLimit;
     }
 
     public int getPageLimit() {
-        return PageLimit;
+        return pageLimit;
     }
 
     public void setPageLimit(int pageLimit) {
-        PageLimit = pageLimit;
+        this.pageLimit = pageLimit;
     }
 
     public List<String> getScopes() {
-        return Scopes;
+        return scopes;
     }
 
     public void setScopes(List<String> scopes) {
-        Scopes = scopes;
+        this.scopes = scopes;
+    }
+
+    @Override
+    public String toString(){
+        return "name: " + packageName + "; adminLimit: " + adminLimit + "; pageLimit: " + packageName + "; Scopes: " + scopes;
     }
 }

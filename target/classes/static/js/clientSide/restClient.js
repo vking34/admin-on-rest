@@ -37,8 +37,6 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
             console.log(type, resource , params);
         
             let pageRequest = params.pagination.page - 1;
-            // console.log(params.pagination.page);
-            // console.log(params.filter.q);
             if(typeof params.filter.q !== "undefined"){
                 // console.log(true);
                 switch (resource){
@@ -102,16 +100,8 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
             switch (resource){
                 case bizweb_stores_resource:{
                     payload = {
-                        HasUpdate: params.data.HasUpdate
-                    };
-                    break;
-                }
-
-                case pages_resource: {
-                    payload = {
-                        facebookPageId: params.data.facebookPageId,
-                        createdOn: params.data.createdOn,
-                        accountMaps: params.data.accountMaps
+                        alias: params.data.alias,
+                        packageInfo: params.data.packageInfo
                     };
                     break;
                 }
@@ -159,17 +149,10 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
             }
         }
 
-        // case GET_MANY: {
-        //     const query = {
-        //         filter: JSON.stringify({ id: params.ids }),
-        //     };
-        //     url = `${API_URL}/${resource}?${stringify(query)}`;
-        //     break;
-        // }
-
         case GET_MANY_REFERENCE : {
             console.log(type, resource, params);
-            return json !== null
+            console.log(json);
+            return json
             ? {
               data : json.content.map(x => {
                   return {...x, id: x.id, parent: params.id}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import { refreshView, showNotification as showNotificationAction } from 'admin-on-rest';
 import { push as pushAction } from 'react-router-redux';
 
@@ -11,8 +11,6 @@ class DeleteAccountButton extends Component {
 
         const { push, record, showNotification, refreshView } = this.props;
         console.log(record);
-
-        // const updatedRecord = { ...record, is_approved: true };
 
         fetch(`/bizweb-stores/${record.parent}/accounts/${record.id}`,
             {
@@ -38,7 +36,7 @@ class DeleteAccountButton extends Component {
     };
 
     render() {
-        return <FlatButton label="Delete" onClick={this.handleClick} />;
+        return <RaisedButton label="Delete" onClick={this.handleClick} />;
     }
 }
 
