@@ -2,33 +2,19 @@ import React from 'react';
 import {
     TabbedForm,
     FormTab,
-    ThumbnailField,
     ReferenceManyField,
-    RefreshButton,
-    ListButton,
-    Show,
-    SimpleShowLayout,
     List,
     Edit,
     Create,
     Datagrid,
-    BooleanInput,
-    BooleanField,
     TextField,
-    ReferenceField,
-    NumberField,
-    NumberInput,
     EditButton,
     DeleteButton,
     DisabledInput,
-    LongTextInput,
-    ReferenceInput,
     required,
-    SelectInput,
     SimpleForm,
     TextInput,
-    Filter,
-    DateInput
+    Filter
 } from 'admin-on-rest';
 import {dateFormatter, dateParser} from "../functions/dateConverter";
 import MsgList from "../components/msgList";
@@ -42,7 +28,7 @@ export const AccountList = (props) => (
             <TextField source="name"/>
             <TextField label="FB-User-ID" source="facebookUserId" />
             <EditButton />
-            <DeleteButton />
+            {/*<DeleteButton />*/}
         </Datagrid>
     </List>
 );
@@ -67,7 +53,7 @@ MessengerPlatformIdField.defaultProps= { label: 'Messenger Platform IDs'};
 
 export const AccountEdit = (props) => (
     <Edit title={<AccountTitle />} {...props}>
-        {perrmissions =>
+        {permissions =>
             <TabbedForm>
                 <FormTab label="Basic Info">
                     <TextField label="ID" source="id"/>
@@ -80,7 +66,7 @@ export const AccountEdit = (props) => (
                     {/*<DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
                 </FormTab>
 
-                <FormTab label="Page Maps">
+                <FormTab label="Page_Maps">
                     <ReferenceManyField addLabel={false} reference="pages" target="accounts">
                         <Datagrid>
                             <TextField label="ID" source="id"/>
@@ -92,11 +78,11 @@ export const AccountEdit = (props) => (
                     </ReferenceManyField>
                 </FormTab>
 
-                <FormTab label="Bizweb-CustomerMaps">
+                <FormTab label="Bizweb_CustomerMaps">
                     <BizwebCustomerMapField source="bizwebCustomerMaps"/>
                 </FormTab>
 
-                <FormTab label="Messenger-Platform-IDs">
+                <FormTab label="Messenger_Platform_IDs">
                     <MessengerPlatformIdField source="messengerPlatformIds"/>
                 </FormTab>
 

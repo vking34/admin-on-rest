@@ -38,7 +38,6 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         
             let pageRequest = params.pagination.page - 1;
             if(typeof params.filter.q !== "undefined"){
-                // console.log(true);
                 switch (resource){
                     case bizweb_stores_resource : {
                         url = `${API_URL}/${resource}/filter/?alias=${params.filter.q}&&page=${pageRequest}`;
@@ -55,9 +54,7 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
                         break;
                     }
                 }
-
             }else {
-                // console.log(false);
                 url = `${API_URL}/${resource}/?page=${pageRequest}`;
             }
 
@@ -65,15 +62,12 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         }
 
         case GET_ONE: {
-
             console.log(type, resource, params);
-
             url = `${API_URL}/${resource}/${params.id}`;
             break;
         }
 
         case GET_MANY_REFERENCE: {
-
             // console.log(type, resource, params);
             let pageRequest = params.pagination.page - 1;
             url = `${API_URL}/${params.target}/${params.id}/${resource}?page=${pageRequest}`;
@@ -82,6 +76,7 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         }
 
         case CREATE: {
+            console.log(type, resource, params);
 
             url = `${API_URL}/${resource}`;
             options.method = 'POST';
@@ -114,6 +109,11 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
                     };
                     break;
                 }
+                default:
+                    url = `${API_URL}/${resource}/${params.id}`;
+                    options.method = 'GET';
+
+                    return {url, options};
             }
 
             console.log(payload);
@@ -174,13 +174,26 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
 
         case UPDATE:
         {
-            return {
-                data: { ...params.data, id: params.id }
-            };
+            if(resource === bizweb_stores_resource){
+                if(json.status === false)
+                {
+                    alert("Unsuccessful!");
+                    return null;
+                }
+                else {
+                    return {
+                        data: { ...params.data, id: params.id }
+                    };
+                }
+            }
+            else {
+                return {
+                  data: { ...params.previousData}
+                };
+            }
         }
 
         default:
-            // console.log(json);
             return { data: json };
     }
 };

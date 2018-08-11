@@ -53,7 +53,4 @@ public class DeleteControllersAspect {
 //        System.out.println(joinPoint.getThis() + "; " + joinPoint.getKind() + "; " + joinPoint.getSourceLocation() + "; " + joinPoint.getTarget() + "; " + joinPoint.getStaticPart());
 //    }
 
-
-
-
 }

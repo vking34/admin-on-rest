@@ -82,8 +82,15 @@ public class BizwebStoresController {
 
         if(store != null){
             JSONObject json = new JSONObject(info);
-            if(!store.getAlias().equals(json.getString("alias")))
-                store.setAlias(json.getString("alias"));
+            String alias = json.getString("alias");
+
+            if(bizwebStoreRepository.findBizwebStoreByAlias(alias) != null){
+                return new resp(false);
+            }
+
+            if(!store.getAlias().equals(alias))
+                store.setAlias(alias);
+
             Gson gson = new Gson();
             PackageInfo packageInfo = gson.fromJson(json.getJSONObject("packageInfo").toString(), PackageInfo.class);
             store.setPackageInfo(packageInfo);

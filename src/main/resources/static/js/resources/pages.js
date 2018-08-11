@@ -2,33 +2,19 @@ import React from 'react';
 import {
     TabbedForm,
     FormTab,
-    RefreshButton,
-    ReferenceManyField,
-    ListButton,
-    Show,
-    SimpleShowLayout,
     List,
     Edit,
     Create,
     Datagrid,
-    BooleanInput,
-    BooleanField,
     TextField,
-    ReferenceField,
-    NumberField,
-    NumberInput,
     EditButton,
     DeleteButton,
     DisabledInput,
-    LongTextInput,
-    ReferenceInput,
     required,
-    SelectInput,
     SimpleForm,
     TextInput,
     Filter,
-    DateInput,
-    FunctionField
+    ReferenceManyField
 } from 'admin-on-rest';
 
 import {dateFormatter, dateParser} from "../functions/dateConverter";
@@ -43,7 +29,7 @@ export const PageList = (props) => (
                 <TextField source="name"/>
                 <TextField label="FB Page ID" source="facebookPageId"/>
                 <EditButton/>
-                { permissions === 'ROLE_ADMIN' && <DeleteButton/>}
+                {/*{ permissions === 'ROLE_ADMIN' && <DeleteButton/>}*/}
             </Datagrid>
         }
     </List>
@@ -54,14 +40,6 @@ const PageFilter = (props) => (
         <TextInput label="Search by Name" source="q" alwaysOn />
     </Filter>
 );
-
-const PageTitle = ( {record}) => {
-    return <span>Edit page: { record ? `${record.name}` : ''} </span>
-};
-
-const AccessTokenField = ({ record = {} }) =>
-    <AccessToken token={record.access_token}/>;
-AccessTokenField.defaultProps = { label: 'FB-Access-Token'};
 
 export const PageEdit = (props) => (
     <Edit title={<PageTitle/>} {...props}>
@@ -77,14 +55,14 @@ export const PageEdit = (props) => (
                     {/*<DateInput label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
                 </FormTab>
 
-                <FormTab label="account-maps">
+                <FormTab label="account_maps">
                     <ReferenceManyField addLabel={false} reference="accounts" target="pages">
                         <Datagrid>
                             <TextField label="ID" source="id"/>
                             <TextField source="name"/>
                             { permissions === 'ROLE_ADMIN' && <AccessTokenField source="access_token"/>}
                             <EditButton/>
-                            { permissions === 'ROLE_ADMIN' && <DeleteAccountButton/>}
+                            {/*{ permissions === 'ROLE_ADMIN' && <DeleteAccountButton/>}*/}
                         </Datagrid>
                     </ReferenceManyField>
                 </FormTab>
@@ -92,6 +70,14 @@ export const PageEdit = (props) => (
         }
     </Edit>
 );
+
+const PageTitle = ( {record}) => {
+    return <span>Edit page: { record ? `${record.name}` : ''} </span>
+};
+
+const AccessTokenField = ({ record = {} }) =>
+    <AccessToken token={record.access_token}/>;
+AccessTokenField.defaultProps = { label: 'FB-Access-Token'};
 
 // export const PageCreate = (props) => {
 //     <Create {...props} redirect="list" >

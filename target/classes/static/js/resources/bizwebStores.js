@@ -3,39 +3,24 @@ import { CardActions } from 'material-ui/Card';
 import {
     TabbedForm,
     FormTab,
-    ThumbnailField,
     ReferenceManyField,
-    RefreshButton,
-    ListButton,
-    Show,
-    SimpleShowLayout,
     List,
     Edit,
     Create,
     Datagrid,
-    BooleanInput,
     BooleanField,
     TextField,
-    ReferenceField,
-    NumberField,
     NumberInput,
     EditButton,
     DeleteButton,
     DisabledInput,
-    LongTextInput,
-    ReferenceInput,
     required,
-    SelectInput,
     SimpleForm,
     TextInput,
     Filter,
-    DateInput,
     SelectArrayInput,
-    FunctionField,
-    RichTextField,
-    DateField
+    FunctionField
 } from 'admin-on-rest';
-import {dateFormatter, dateParser} from "../functions/dateConverter";
 import AccessToken from "../components/tokenField";
 import PagesField from "../fields/PagesField";
 import DeleteAccountButton from "../components/deleteAccountFromStore";
@@ -67,52 +52,23 @@ const BizwebStoreFilter = (props) => (
   </Filter>
 );
 
-const PostShowActions = ({ basePath, data }) => (
-    <CardActions style={cardActionStyle}>
-        <EditButton basePath={basePath} record={data} />
-        <ListButton basePath={basePath} />
-        <DeleteButton basePath={basePath} record={data} />
-        <RefreshButton />
-    </CardActions>
-);
-
-export const BizwebStoreShow = (props) => {
-    <Show title="Store Information" actions={<PostShowActions />} {...props}>
-        <SimpleShowLayout>
-            <TextField label="Alias" source="alias" />
-            <TextField label="API Access Token" source="apiAccessToken" />
-        </SimpleShowLayout>
-    </Show>
-};
-
-
-const BizwebStoreTitle = ( {record}) => {
-    return <span>Edit store: { record ? `${record.alias}` : ''} </span>
-};
-
-const AccessTokenField = ({ record = {}} ) =>
-    <AccessToken token={record.fbUserAccessToken} />;
-AccessTokenField.defaultProps= { label: 'User Access Token'};
-
 export const BizwebStoreEdit = (props) => (
-  <Edit title={<BizwebStoreTitle/>} {...props}>
+  <Edit title={<BizwebStoreTitle/>} {...props} >
       { permissions =>
-        <TabbedForm>
+        <TabbedForm redirect={false}>
             <FormTab label="Basic_Info">
                 <TextField label="ID" source="id" />
                 <TextInput label="Alias" source="alias" />
-                { permissions === 'ROLE_ADMIN' && <TextField label="API-Access-Token" source="apiAccessToken" />}
+                { permissions === 'ROLE_ADMIN' && <TextField label="API Access Token" source="apiAccessToken" />}
                 <TextField label='FB User ID' source="fbUserId" />
                 { permissions === 'ROLE_ADMIN' && <AccessTokenField source="fbUserAccessToken" />}
-                <FunctionField label="Current-Pages" render={record => `${record.pageIds !== null ? record.pageIds.length : 0} / ${record.packageInfo.pageLimit}`} />
-                <FunctionField label="Current-Accounts" render={record => `${record.accountIds !== null ? record.accountIds.length : 0} / ${record.packageInfo.adminLimit}`} />
-                {/*<TextField label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />*/}
-                {/*<TextField label="Modified On" source="modifiedOn" format={dateFormatter} parse={dateParser} />*/}
-                {/*<TextField label="Expiration Time Channel" source="expirationTimeChannel" format={dateFormatter} parse={dateParser} />*/}
+                <FunctionField label="Current Pages" render={record => `${record.pageIds !== null ? record.pageIds.length : 0} / ${record.packageInfo.pageLimit}`} />
+                <FunctionField label="Current Accounts" render={record => `${record.accountIds !== null ? record.accountIds.length : 0} / ${record.packageInfo.adminLimit}`} />
                 <TextField label="Created On" source="createdOn" />
                 <TextField label="Modified On" source="modifiedOn" />
                 <TextField label="Expiration Time Channel" source="expirationTimeChannel" />
                 <TextField label="Bizweb Channels" source="bwChannels" />
+                {/*<ChannelsField />*/}
             </FormTab>
 
             <FormTab label="Package_Info" >
@@ -156,6 +112,15 @@ export const BizwebStoreEdit = (props) => (
       }
   </Edit>
 );
+
+const BizwebStoreTitle = ( {record}) => {
+    return <span>Edit store: { record ? `${record.alias}` : ''} </span>
+};
+
+const AccessTokenField = ({ record = {}} ) =>
+    <AccessToken token={record.fbUserAccessToken} />;
+AccessTokenField.defaultProps= { label: 'User Access Token'};
+
 
 // export const BizwebStoreCreate = (props) => {
 //     <Create {...props} redirect="list" >

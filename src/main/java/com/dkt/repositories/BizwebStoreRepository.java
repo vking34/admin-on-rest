@@ -20,7 +20,7 @@ public interface BizwebStoreRepository extends MongoRepository<BizwebStore, Stri
     @Query(value = "{}", fields = "{ ApiAccessToken : 0 }")
     public Page<BizwebStore> findAllNotIncludingToken(Pageable pageable);
 
-    @Query("{ Alias: { '$regex': ?0}}")
+    @Query("{ Alias: { '$regex': ?0, '$options' : 'i' }}")
     public Page<BizwebStore> findBizwebStoresByAlias(String alias, Pageable pageRequest);
 
     @Query(value = "{ '_id' : ?0 }", fields ="{ ApiAccessToken: 0 }")

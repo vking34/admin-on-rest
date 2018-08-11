@@ -14,7 +14,7 @@ import java.util.List;
 public interface AccountRepository extends MongoRepository<Account, String> {
 
 
-    @Query("{ Name : { '$regex': ?0 }}")
+    @Query("{ Name : { '$regex': ?0, '$options': 'i' }}")
     public Page<Account> findAccountsByName(String Name, Pageable pageable);
 
     public Account findAccountById(String id);

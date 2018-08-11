@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface FbPageRepository extends MongoRepository<FbPage, String> {
 
-    @Query("{ Name: { '$regex': ?0 }}")
+    @Query("{ Name: { '$regex': ?0 , '$options': 'i' }}")
     public Page<FbPage> findPagesByName(String name, Pageable pageable);
 
     public FbPage findPageByName(String name);

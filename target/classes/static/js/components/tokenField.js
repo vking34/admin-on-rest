@@ -7,7 +7,8 @@ class AccessToken extends React.Component{
     render(){
         return(
             <div >
-                <span>User Access Token:</span>
+                <br/>
+                <span style={{ fontSize : '13px'}}>User Access Token:</span>
                 <br/>
                 <textarea readOnly={true} value={this.props.token ? this.props.token : this.val} style={{ width : '600px', height : '60px', display: 'block'}}></textarea>
             </div>

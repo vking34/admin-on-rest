@@ -7,16 +7,10 @@ import {
     BooleanInput,
     BooleanField,
     TextField,
-    ReferenceField,
-    NumberField,
-    NumberInput,
     EditButton,
     DeleteButton,
     DisabledInput,
-    LongTextInput,
-    ReferenceInput,
     required,
-    SelectInput,
     SimpleForm,
     TextInput,
     Filter
@@ -37,13 +31,10 @@ export const UserList = (props) => (
 
 const UsersFilter = (props) => (
     <Filter {...props}>
-        <TextInput label="Search" source="q" alwaysOn />
+        <TextInput label="Search by Username" source="q" alwaysOn />
     </Filter>
 );
 
-const UserTitle = ({ record }) => {
-    return <span>Edit user: { record ? `${record.username}` : '' }</span>
-};
 
 export const UserEdit = (props) => (
     <Edit title={<UserTitle />} {...props}>
@@ -56,6 +47,10 @@ export const UserEdit = (props) => (
         </SimpleForm>
     </Edit>
 );
+
+const UserTitle = ({ record }) => {
+    return <span>Edit user: { record ? `${record.username}` : '' }</span>
+};
 
 export const UserCreate = (props) => (
     <Create {...props}>

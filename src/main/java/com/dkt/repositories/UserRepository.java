@@ -14,7 +14,7 @@ public interface UserRepository extends MongoRepository<AppUser, String> {
     public AppUser findUserById(String id);
     public AppUser findUserByUsername(String name);
     public void deleteUserById(String id);
-    @Query(value = "{username : {'$regex': ?0}}", fields = "{ password: 0}")
+    @Query(value = "{username : {'$regex': ?0, '$options': 'i' }}", fields = "{ password: 0}")
     public Page<AppUser> findUsersByUsername(String username, Pageable pageable);
 
     @Query(value = "{}", fields = "{ password: 0 }")

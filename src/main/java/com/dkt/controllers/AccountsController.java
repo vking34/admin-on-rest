@@ -39,22 +39,20 @@ public class AccountsController {
         return accountRepository.findAccountById(id);
     }
 
-    @PutMapping("/{id}")
-    public resp updateAccout(@PathVariable String id, @RequestBody Map info){
-        System.out.println("UPDATE: Account " + id);
-        Account account = accountRepository.findAccountById(id);
-        List<Customer> customers = account.getBizwebCustomerMaps();
-//        String customerMaps = info.get("bizweb_customer_maps");
-
-//        System.out.println(info.get(0).toString());
-        Customer customer = customers.get(0);
-        customer.setName("Le Hien Thu");
-        System.out.println(customers.get(0).getPageId());
-
-
-
-        return new resp(false);
-    }
+//    @PutMapping("/{id}")
+//    public resp updateAccout(@PathVariable String id, @RequestBody Map info){
+//        System.out.println("UPDATE: Account " + id);
+//        Account account = accountRepository.findAccountById(id);
+//        List<Customer> customers = account.getBizwebCustomerMaps();
+////        String customerMaps = info.get("bizweb_customer_maps");
+//
+////        System.out.println(info.get(0).toString());
+//        Customer customer = customers.get(0);
+//        customer.setName("Le Hien Thu");
+//        System.out.println(customers.get(0).getPageId());
+//
+//        return new resp(false);
+//    }
 
     @DeleteMapping("/{id}")
     public resp deleteAccountById(@PathVariable String id){

@@ -26,9 +26,6 @@ public class UsersController {
 
     BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     // get all users by page
     @GetMapping("/")
@@ -142,10 +139,6 @@ public class UsersController {
     @GetMapping("/filter/")
     public Page<AppUser> getUserByUsername(@RequestParam("username") String username, @RequestParam("page") int page){
         System.out.println("Filter according to " + username);
-//        List<AppUser> users = userRepository.findUsersByUsername(username);
-//        JSONObject result = new JSONObject();
-//        result.put("data", users);
-//        result.put("total", users.size());
         PageRequest pageRequest = new PageRequest(page, 10);
 
         return userRepository.findUsersByUsername(username, pageRequest);
