@@ -1,16 +1,12 @@
 import React from 'react';
 import Chip from 'material-ui/Chip';
-
-const styles = {
-    main: { display: 'flex', flexWrap: 'wrap' },
-    chip: { margin: 4 },
-};
+import ChipStyle from "../css/FieldStyle";
 
 
 const PagesField = ({ record }) => (
-    <span style={styles.main}>
+    <span style={ChipStyle.main}>
         {record.pagesName.map(p => (
-            <Chip key={p} style={styles.chip}>
+            <Chip key={p} style={ChipStyle.chip}>
                 {p}
             </Chip>
         ))}

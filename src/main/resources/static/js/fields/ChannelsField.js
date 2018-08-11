@@ -2,20 +2,20 @@ import React from 'react';
 import Chip from 'material-ui/Chip';
 import ChipStyle from "../css/FieldStyle";
 
-
-const PagesField = ({ record }) => (
+const ChannelsField = ({ record }) => (
     <span style={ChipStyle.main}>
-        {record.pagesName.map(p => (
+        {record.bwChannels.split(',').map(p => (
             <Chip key={p} style={ChipStyle.chip}>
                 {p}
             </Chip>
-        ))}
+        ))
+        }
     </span>
 );
 
-PagesField.defaultProps = {
+ChannelsField.defaultProps = {
     addLabel: true,
-    source: 'pagesName',
+    source: 'bwChannels',
 };
 
-export default PagesField;
+export default ChannelsField;

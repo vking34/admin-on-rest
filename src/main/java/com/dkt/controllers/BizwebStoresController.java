@@ -6,19 +6,13 @@ import com.dkt.passingObjects.resp;
 import com.dkt.repositories.AccountRepository;
 import com.dkt.repositories.BizwebStoreRepository;
 import com.dkt.repositories.FbPageRepository;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.bson.types.ObjectId;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.json.GsonJsonParser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -62,7 +56,6 @@ public class BizwebStoresController {
         System.out.println("GET: One BizwebStore " + id);
         Collection grantedAuthorities = SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 //        System.out.println(grantedAuthorities);
-
         String role = grantedAuthorities.iterator().next().toString();
 
         if(role.equals("ROLE_ADMIN")) {

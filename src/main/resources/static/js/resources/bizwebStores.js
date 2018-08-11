@@ -23,8 +23,10 @@ import {
 } from 'admin-on-rest';
 import AccessToken from "../components/tokenField";
 import PagesField from "../fields/PagesField";
+import ChannelsField from "../fields/ChannelsField";
 import DeleteAccountButton from "../components/deleteAccountFromStore";
 import DeletePageButton from "../components/deletePageFromStore";
+
 
 const cardActionStyle = {
     zIndex: 2,
@@ -67,8 +69,8 @@ export const BizwebStoreEdit = (props) => (
                 <TextField label="Created On" source="createdOn" />
                 <TextField label="Modified On" source="modifiedOn" />
                 <TextField label="Expiration Time Channel" source="expirationTimeChannel" />
-                <TextField label="Bizweb Channels" source="bwChannels" />
-                {/*<ChannelsField />*/}
+                {/*<TextField label="Bizweb Channels" source="bwChannels" />*/}
+                <ChannelsField />
             </FormTab>
 
             <FormTab label="Package_Info" >
