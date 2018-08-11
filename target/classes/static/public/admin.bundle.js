@@ -26295,7 +26295,7 @@ var _RaisedButton = __webpack_require__(62);
 
 var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
-var _hotTub = __webpack_require__(1008);
+var _hotTub = __webpack_require__(1007);
 
 var _hotTub2 = _interopRequireDefault(_hotTub);
 
@@ -37638,11 +37638,11 @@ var _IconButton = __webpack_require__(70);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
-var _expandLess = __webpack_require__(1004);
+var _expandLess = __webpack_require__(1003);
 
 var _expandLess2 = _interopRequireDefault(_expandLess);
 
-var _expandMore = __webpack_require__(1005);
+var _expandMore = __webpack_require__(1004);
 
 var _expandMore2 = _interopRequireDefault(_expandMore);
 
@@ -38417,7 +38417,7 @@ var _Popover = __webpack_require__(129);
 
 var _Popover2 = _interopRequireDefault(_Popover);
 
-var _check = __webpack_require__(1003);
+var _check = __webpack_require__(1002);
 
 var _check2 = _interopRequireDefault(_check);
 
@@ -46635,25 +46635,25 @@ var _authClient2 = _interopRequireDefault(_authClient);
 
 var _users = __webpack_require__(678);
 
-var _people = __webpack_require__(1010);
+var _people = __webpack_require__(1009);
 
 var _people2 = _interopRequireDefault(_people);
 
-var _pages = __webpack_require__(1009);
+var _facebook = __webpack_require__(1008);
 
-var _pages2 = _interopRequireDefault(_pages);
+var _facebook2 = _interopRequireDefault(_facebook);
 
-var _person = __webpack_require__(1011);
+var _person = __webpack_require__(1010);
 
 var _person2 = _interopRequireDefault(_person);
 
-var _collections = __webpack_require__(999);
+var _store = __webpack_require__(1011);
 
-var _collections2 = _interopRequireDefault(_collections);
+var _store2 = _interopRequireDefault(_store);
 
 var _bizwebStores = __webpack_require__(676);
 
-var _pages3 = __webpack_require__(677);
+var _pages = __webpack_require__(677);
 
 var _accounts = __webpack_require__(675);
 
@@ -46678,7 +46678,7 @@ var App = function App() {
             loginPage: _Login2.default
         },
         function (permissions) {
-            return [permissions === 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'users', list: _users.UserList, create: _users.UserCreate, edit: _users.UserEdit, remove: _adminOnRest.Delete, icon: _people2.default }) : _react2.default.createElement(_adminOnRest.Resource, { name: 'bizweb-stores', list: _bizwebStores.BizwebStoreList, remove: _adminOnRest.Delete, edit: _bizwebStores.BizwebStoreEdit, icon: _collections2.default }), permissions !== 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'pages', list: _pages3.PageList, edit: _pages3.PageEdit, remove: _adminOnRest.Delete, icon: _pages2.default }) : null, permissions !== 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'accounts', list: _accounts.AccountList, edit: _accounts.AccountEdit, remove: _adminOnRest.Delete, icon: _person2.default }) : null];
+            return [permissions === 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'users', list: _users.UserList, create: _users.UserCreate, edit: _users.UserEdit, remove: _adminOnRest.Delete, icon: _people2.default }) : _react2.default.createElement(_adminOnRest.Resource, { name: 'bizweb-stores', list: _bizwebStores.BizwebStoreList, remove: _adminOnRest.Delete, edit: _bizwebStores.BizwebStoreEdit, icon: _store2.default }), permissions !== 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'pages', list: _pages.PageList, edit: _pages.PageEdit, remove: _adminOnRest.Delete, icon: _facebook2.default }) : null, permissions !== 'ROLE_ROOT' ? _react2.default.createElement(_adminOnRest.Resource, { name: 'accounts', list: _accounts.AccountList, edit: _accounts.AccountEdit, remove: _adminOnRest.Delete, icon: _person2.default }) : null];
         }
     );
 };
@@ -48402,7 +48402,7 @@ var _FlatButton = __webpack_require__(41);
 
 var _FlatButton2 = _interopRequireDefault(_FlatButton);
 
-var _refresh = __webpack_require__(1007);
+var _refresh = __webpack_require__(1006);
 
 var _refresh2 = _interopRequireDefault(_refresh);
 
@@ -48648,7 +48648,7 @@ var _FlatButton = __webpack_require__(41);
 
 var _FlatButton2 = _interopRequireDefault(_FlatButton);
 
-var _removeRedEye = __webpack_require__(1000);
+var _removeRedEye = __webpack_require__(999);
 
 var _removeRedEye2 = _interopRequireDefault(_removeRedEye);
 
@@ -84908,7 +84908,7 @@ var _IconButton = __webpack_require__(70);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
-var _menu = __webpack_require__(1006);
+var _menu = __webpack_require__(1005);
 
 var _menu2 = _interopRequireDefault(_menu);
 
@@ -86928,7 +86928,7 @@ var _EnhancedButton = __webpack_require__(63);
 
 var _EnhancedButton2 = _interopRequireDefault(_EnhancedButton);
 
-var _cancel = __webpack_require__(1002);
+var _cancel = __webpack_require__(1001);
 
 var _cancel2 = _interopRequireDefault(_cancel);
 
@@ -91311,7 +91311,7 @@ var _transitions = __webpack_require__(17);
 
 var _transitions2 = _interopRequireDefault(_transitions);
 
-var _arrowDropDown = __webpack_require__(1001);
+var _arrowDropDown = __webpack_require__(1000);
 
 var _arrowDropDown2 = _interopRequireDefault(_arrowDropDown);
 
@@ -102330,44 +102330,6 @@ var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ImageCollections = function ImageCollections(props) {
-  return _react2.default.createElement(
-    _SvgIcon2.default,
-    props,
-    _react2.default.createElement('path', { d: 'M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z' })
-  );
-};
-ImageCollections = (0, _pure2.default)(ImageCollections);
-ImageCollections.displayName = 'ImageCollections';
-ImageCollections.muiName = 'SvgIcon';
-
-exports.default = ImageCollections;
-
-/***/ }),
-/* 1000 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(15);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-var _SvgIcon = __webpack_require__(14);
-
-var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var ImageRemoveRedEye = function ImageRemoveRedEye(props) {
   return _react2.default.createElement(
     _SvgIcon2.default,
@@ -102382,7 +102344,7 @@ ImageRemoveRedEye.muiName = 'SvgIcon';
 exports.default = ImageRemoveRedEye;
 
 /***/ }),
-/* 1001 */
+/* 1000 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102420,7 +102382,7 @@ NavigationArrowDropDown.muiName = 'SvgIcon';
 exports.default = NavigationArrowDropDown;
 
 /***/ }),
-/* 1002 */
+/* 1001 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102458,7 +102420,7 @@ NavigationCancel.muiName = 'SvgIcon';
 exports.default = NavigationCancel;
 
 /***/ }),
-/* 1003 */
+/* 1002 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102496,7 +102458,7 @@ NavigationCheck.muiName = 'SvgIcon';
 exports.default = NavigationCheck;
 
 /***/ }),
-/* 1004 */
+/* 1003 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102534,7 +102496,7 @@ NavigationExpandLess.muiName = 'SvgIcon';
 exports.default = NavigationExpandLess;
 
 /***/ }),
-/* 1005 */
+/* 1004 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102572,7 +102534,7 @@ NavigationExpandMore.muiName = 'SvgIcon';
 exports.default = NavigationExpandMore;
 
 /***/ }),
-/* 1006 */
+/* 1005 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102610,7 +102572,7 @@ NavigationMenu.muiName = 'SvgIcon';
 exports.default = NavigationMenu;
 
 /***/ }),
-/* 1007 */
+/* 1006 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102648,7 +102610,7 @@ NavigationRefresh.muiName = 'SvgIcon';
 exports.default = NavigationRefresh;
 
 /***/ }),
-/* 1008 */
+/* 1007 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102687,14 +102649,14 @@ PlacesHotTub.muiName = 'SvgIcon';
 exports.default = PlacesHotTub;
 
 /***/ }),
-/* 1009 */
+/* 1008 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(0);
@@ -102711,21 +102673,22 @@ var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SocialPages = function SocialPages(props) {
-  return _react2.default.createElement(
-    _SvgIcon2.default,
-    props,
-    _react2.default.createElement('path', { d: 'M3 5v6h5L7 7l4 1V3H5c-1.1 0-2 .9-2 2zm5 8H3v6c0 1.1.9 2 2 2h6v-5l-4 1 1-4zm9 4l-4-1v5h6c1.1 0 2-.9 2-2v-6h-5l1 4zm2-14h-6v5l4-1-1 4h5V5c0-1.1-.9-2-2-2z' })
-  );
+var FacebookIcon = function FacebookIcon(props) {
+    return _react2.default.createElement(
+        _SvgIcon2.default,
+        props,
+        _react2.default.createElement('path', { d: 'M18 0 L 2.199219 0 C 1 0 0 1 0 2.199219 L 0 21.800781 C 0 23 1 24 2.199219 24 L 12 24 L 12 14 L 9 14 L 9 11 L 12 11 L 12 8 C 12 5.5 13 4 16 4 L 19 4 L 19 7 L 17.699219 7 C 16.800781 7 16 7.800781 16 8.699219 L 16 11 L 20 11 L 19.5 14 L 16 14 L 16 24 L 21.800781 24 C 23 24 24 23 24 21.800781 L 24 2.199219 C 24 1 23 0 21.800781 0 Z ' })
+    );
 };
-SocialPages = (0, _pure2.default)(SocialPages);
-SocialPages.displayName = 'SocialPages';
-SocialPages.muiName = 'SvgIcon';
+FacebookIcon = (0, _pure2.default)(FacebookIcon);
+FacebookIcon.displayName = 'FacebookIcon';
+FacebookIcon.muiName = 'SvgIcon';
 
-exports.default = SocialPages;
+exports.default = FacebookIcon;
+
 
 /***/ }),
-/* 1010 */
+/* 1009 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102763,7 +102726,7 @@ SocialPeople.muiName = 'SvgIcon';
 exports.default = SocialPeople;
 
 /***/ }),
-/* 1011 */
+/* 1010 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102799,6 +102762,45 @@ SocialPerson.displayName = 'SocialPerson';
 SocialPerson.muiName = 'SvgIcon';
 
 exports.default = SocialPerson;
+
+/***/ }),
+/* 1011 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(15);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+var _SvgIcon = __webpack_require__(14);
+
+var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var StoreIcon = function Store(props) {
+    return _react2.default.createElement(
+        _SvgIcon2.default,
+        props,
+        _react2.default.createElement('path', { d: 'M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z' })
+    );
+};
+StoreIcon = (0, _pure2.default)(StoreIcon);
+StoreIcon.displayName = 'StoreIcon';
+StoreIcon.muiName = 'SvgIcon';
+
+exports.default = StoreIcon;
+
 
 /***/ }),
 /* 1012 */

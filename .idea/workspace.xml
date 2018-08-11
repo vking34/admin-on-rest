@@ -249,11 +249,11 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+            <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="378">
-                    <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+                  <state relative-caret-position="90">
+                    <caret line="5" column="51" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="51" />
                   </state>
                 </provider>
               </entry>
@@ -270,7 +270,7 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="FieldStyle.js" pinned="false" current-in-tab="true">
+            <file leaf-file-name="FieldStyle.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/css/FieldStyle.js">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="90">
@@ -346,7 +346,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/ChannelsField.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -354,11 +354,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BizwebStoresController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BizwebStoresController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/BizwebStoresController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="396">
+              <caret line="55" column="57" lean-forward="true" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -366,9 +366,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/icons/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="54" selection-start-column="54" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebook.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/icons/facebook.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
@@ -438,9 +451,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/StoreAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/AppUser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/actions/actions.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/LogRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/aop_logging/BizwebAspect.java" />
@@ -468,7 +478,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/tokenGridField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/msgList.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/FbPage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/App.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/BizwebStoreRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/FbPageRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/repositories/UserRepository.java" />
@@ -489,6 +498,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/ChannelsField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/BizwebStoresController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/css/StoreIcon.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/App.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/css/store.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/icons/facebook.js" />
       </list>
     </option>
   </component>
@@ -716,6 +729,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -747,7 +770,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js/resources/examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js/icons" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -764,11 +787,11 @@
       <recent name="com.dkt.models.examples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js/icons" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js/resources/examples" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js/clientSide" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js/react-redux" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js/components/others" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -948,12 +971,12 @@
       <workItem from="1533867904215" duration="6806000" />
       <workItem from="1533874849755" duration="3472000" />
       <workItem from="1533882657255" duration="14232000" />
-      <workItem from="1533979369676" duration="3968000" />
+      <workItem from="1533979369676" duration="8910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529263000" />
+    <option name="totallyTimeSpent" value="534205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -984,11 +1007,11 @@
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28258488" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21796276" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Spring" order="16" weight="0.32909605" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.17467949" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="right" id="Theme Preview" order="11" />
@@ -1091,21 +1114,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1384,13 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/PagesField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1434,20 +1435,44 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/ChannelsField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/css/StoreIcon.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/BizwebStoresController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+        <state relative-caret-position="396">
+          <caret line="55" column="57" lean-forward="true" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/icons/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/icons/facebook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>

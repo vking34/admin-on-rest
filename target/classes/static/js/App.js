@@ -1,21 +1,18 @@
 import React from 'react';
-import { jsonServerRestClient, Admin, Resource, Delete } from 'admin-on-rest';
+import { Admin, Resource, Delete } from 'admin-on-rest';
 import myApiRestClient from './clientSide/restClient';
 import authClient from "./clientSide/authClient";
-import {UserCreate, UserEdit, UserList} from "./resources/users";
+import { UserCreate, UserEdit, UserList} from "./resources/users";
 import UsersIcon from "material-ui/svg-icons/social/people";
-import PagesIcon from "material-ui/svg-icons/social/pages";
+import PagesIcon from "material-ui/svg-icons/social/facebook";
 import AccountIcon from "material-ui/svg-icons/social/person";
-import StoreIcon from "material-ui/svg-icons/image/collections"
+import StoreIcon from "material-ui/svg-icons/social/store";
 import {
-    BizwebStoreCreate,
     BizwebStoreEdit,
     BizwebStoreList,
-    BizwebStoreShow,
-    SupportBizwebStoreList
 } from "./resources/bizwebStores";
-import {PageCreate, PageEdit, PageList} from "./resources/pages";
-import {AccountCreate, AccountEdit, AccountList} from "./resources/accounts";
+import { PageEdit, PageList } from "./resources/pages";
+import { AccountEdit, AccountList} from "./resources/accounts";
 import Login from "./Login";
 import Dashboard from "./components/Dashboard";
 
