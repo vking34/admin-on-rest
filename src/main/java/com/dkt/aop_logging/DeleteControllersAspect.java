@@ -8,6 +8,7 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,16 +25,16 @@ public class DeleteControllersAspect {
     @Autowired
     private LogRepository logRepository;
 
-    private Logger logger = Logger.getLogger(getClass().getName());
-
     @AfterReturning(pointcut = "execution(* com.dkt.controllers.*.delete*(..))", returning = "response")
     public void executeDelete(JoinPoint joinPoint, resp response){
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
         String role = authentication.getAuthorities().iterator().next().toString();
+        JSONObject params = new JSONObject();
+        params.put("id", joinPoint.getArgs()[0]);
 
-        Log log = new Log(new Date(),username, role, joinPoint.getSignature().toShortString(), joinPoint.getArgs()[0].toString(), response.status);
+        Log log = new Log(new Date(),username, role, joinPoint.getSignature().toShortString(), params.toString(), response.status);
         System.out.println(log);
         logRepository.save(log);
     }

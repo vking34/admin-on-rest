@@ -6,6 +6,7 @@ import com.dkt.repositories.LogRepository;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -30,14 +31,12 @@ public class UpdateControllersAspect {
         String method = joinPoint.getSignature().toShortString();
 
         String id = joinPoint.getArgs()[0].toString();
-        Map<String, String> param = (Map<String, String>) joinPoint.getArgs()[1];
-        param.put("id", id);
+        JSONObject params = new JSONObject((Map<String, Object>) joinPoint.getArgs()[1]);
+        params.put("id", id);
 
         boolean result = response.status;
-        Log log = new Log(new Date(), username, role, method, param.toString(), result);
+        Log log = new Log(new Date(), username, role, method, params.toString(), result);
         System.out.println(log);
         logRepository.save(log);
-
     }
-
 }
