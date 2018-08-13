@@ -15,6 +15,7 @@ import {
     TextInput,
     Filter
 } from 'admin-on-rest';
+// import UserCreateToolbar from "../components/userCreateToolbar";
 
 export const UserList = (props) => (
     <List {...props} filters={<UsersFilter />}>
@@ -38,7 +39,7 @@ const UsersFilter = (props) => (
 
 export const UserEdit = (props) => (
     <Edit title={<UserTitle />} {...props}>
-        <SimpleForm>
+        <SimpleForm >
             <TextField source="id" />
             <TextField label="Username" source="username" />
             <TextInput label="Password" source="password" type="password" />

@@ -169,6 +169,7 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
                 return { data: { ...params.data, id: params.data.username } };
             } else{
                 alert("User exists");
+                return null;
             }
         }
 

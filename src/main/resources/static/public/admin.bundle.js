@@ -66242,6 +66242,7 @@ var convertHTTPResponseToREST = function convertHTTPResponseToREST(response, typ
                     return { data: _extends({}, params.data, { id: params.data.username }) };
                 } else {
                     alert("User exists");
+                    return null;
                 }
             }
 
@@ -66965,17 +66966,9 @@ var AccessToken = function (_React$Component) {
     _inherits(AccessToken, _React$Component);
 
     function AccessToken() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
         _classCallCheck(this, AccessToken);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AccessToken.__proto__ || Object.getPrototypeOf(AccessToken)).call.apply(_ref, [this].concat(args))), _this), _this.val = 'This is the token field', _temp), _possibleConstructorReturn(_this, _ret);
+        return _possibleConstructorReturn(this, (AccessToken.__proto__ || Object.getPrototypeOf(AccessToken)).apply(this, arguments));
     }
 
     _createClass(AccessToken, [{
@@ -66991,7 +66984,7 @@ var AccessToken = function (_React$Component) {
                     'User Access Token:'
                 ),
                 _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { readOnly: true, value: this.props.token ? this.props.token : this.val, style: { width: '600px', height: '60px', display: 'block' } })
+                _react2.default.createElement('textarea', { readOnly: true, value: this.props.token ? this.props.token : 'Access Token is not available', style: { width: '600px', height: '60px', display: 'block' } })
             );
         }
     }]);
@@ -67041,7 +67034,7 @@ var AccessToken = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement('textarea', { readOnly: true, value: this.props.token ? this.props.token : 'No Access Token', style: { width: '530px', height: '65px', display: 'block' } })
+                _react2.default.createElement('textarea', { readOnly: true, value: this.props.token ? this.props.token : 'Access Token is not available', style: { width: '530px', height: '65px', display: 'block' } })
             );
         }
     }]);
@@ -67634,6 +67627,8 @@ var _react2 = _interopRequireDefault(_react);
 var _adminOnRest = __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import UserCreateToolbar from "../components/userCreateToolbar";
 
 var UserList = exports.UserList = function UserList(props) {
     return _react2.default.createElement(

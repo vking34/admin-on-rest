@@ -33,40 +33,38 @@ public class UsersController {
         System.out.println("GET: All users");
         PageRequest pageRequest = new PageRequest(page, 10);
 
-//        return userRepository.findAll(pageRequest);
         return userRepository.findAllNotCludingPassword(pageRequest);
     }
 
     // create a user
     @PostMapping
-    public resp createUser(@RequestBody Map<String, String> user){
-        String username = user.get("username");
-        System.out.println("Creating a user: " + username);
-        boolean admin;
+    public resp createUser(@RequestBody Map<String, Object> user){
+
         try {
-            admin = user.get("admin").equals("true");
-        }
-        catch (Exception e){
-            admin = false;
-        }
+            JSONObject content = new JSONObject(user);
+            String username = content.getString("username");
+            System.out.println("CREATE: User " + username);
+            if(userRepository.findUserByUsername(username) != null){
+                return new resp(false);
+            }
+            boolean admin, active;
 
-        boolean active;
-        try {
-            active  = user.get("active").equals("true");
-        }
-        catch (Exception e){
-            active = false;
-        }
+            try {
+                admin = content.getBoolean("admin");
+            }catch (Exception e1){
+                admin = false;
+            }
 
-        AppUser appUser = new AppUser(username, passwordEncoder.encode(user.get("password")), admin, active);
+            try {
+                active = content.getBoolean("active");
+            }catch (Exception e2){
+                active = false;
+            }
 
-        if(userRepository.findUserByUsername(username) == null){
-
-            userRepository.insert(appUser);
-            System.out.println("Inserted user: " + username);
+            userRepository.insert(new AppUser(username, passwordEncoder.encode(content.getString("password")), admin, active));
             return new resp(true);
-        }else{
-            System.out.println("User exists");
+        }
+        catch (Exception e){
             return new resp(false);
         }
     }
