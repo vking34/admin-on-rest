@@ -21,12 +21,14 @@ import {
     SelectArrayInput,
     FunctionField
 } from 'admin-on-rest';
-import AccessToken from "../components/tokenField";
+import AccessToken from "../fields/TokenField";
 import PagesField from "../fields/PagesField";
 import ChannelsField from "../fields/ChannelsField";
 import DeleteAccountButton from "../components/deleteAccountFromStore";
 import DeletePageButton from "../components/deletePageFromStore";
-
+import StoreLinkField from "../fields/LinkField";
+import PageLinkField from "../fields/LinkField";
+import AccountLinkField from "../fields/LinkField";
 
 const cardActionStyle = {
     zIndex: 2,
@@ -38,7 +40,7 @@ export const BizwebStoreList = (props) => (
     <List {...props} filters={<BizwebStoreFilter/>}>
         {permissions =>
             <Datagrid>
-                <TextField label="ID" source="id"/>
+                <StoreLinkField/>
                 <TextField source="alias"/>
                 { permissions === 'ROLE_ADMIN' && <TextField label="api-access-token" source="apiAccessToken"/>}
                 <EditButton/>
@@ -88,7 +90,8 @@ export const BizwebStoreEdit = (props) => (
             <FormTab label="Pages">
                 <ReferenceManyField addLabel={false} reference="pages" target="bizweb-stores">
                     <Datagrid>
-                        <TextField label="ID" source="id"/>
+                        {/*<TextField label="ID" source="id"/>*/}
+                        <PageLinkField />
                         <TextField source="name"/>
                         <TextField label="FB-Page-ID" source="facebookPageId" />
                         <BooleanField label="Used" source="used" />
@@ -101,7 +104,8 @@ export const BizwebStoreEdit = (props) => (
             <FormTab label="Accounts">
                 <ReferenceManyField addLabel={false} reference="accounts" target="bizweb-stores">
                     <Datagrid>
-                        <TextField label="Account ID" source="id"/>
+                        <AccountLinkField />
+                        {/*<TextField label="Account ID" source="id"/>*/}
                         <TextField label="Account Name" source="accountName"/>
                         <PagesField />
                         <EditButton />

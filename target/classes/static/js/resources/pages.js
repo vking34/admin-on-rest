@@ -16,18 +16,16 @@ import {
     Filter,
     ReferenceManyField
 } from 'admin-on-rest';
-
-import {dateFormatter, dateParser} from "../functions/dateConverter";
-import DeleteAccountButton from "../components/deleteAccountFromPage";
-import AccessToken from "../components/tokenGridField";
+import AccessToken from "../fields/TokenGridField";
+import PageLinkField from "../fields/LinkField";
 
 export const PageList = (props) => (
     <List {...props} filters={<PageFilter/>}>
         {permissions =>
             <Datagrid>
-                <TextField label="ID" source="id"/>
+                <PageLinkField/>
                 <TextField source="name"/>
-                <TextField label="FB Page ID" source="facebookPageId"/>
+                <TextField label="FB_Page_ID" source="facebookPageId"/>
                 <EditButton/>
                 {/*{ permissions === 'ROLE_ADMIN' && <DeleteButton/>}*/}
             </Datagrid>
@@ -45,7 +43,7 @@ export const PageEdit = (props) => (
     <Edit title={<PageTitle/>} {...props}>
         {permissions =>
             <TabbedForm>
-                <FormTab label="Basic Info">
+                <FormTab label="Basic_Info">
                     <TextField label="ID" source="id"/>
                     <TextField label="FB Page ID" source="facebookPageId"/>
                     <TextField label="Name" source="name"/>
@@ -79,11 +77,3 @@ const AccessTokenField = ({ record = {} }) =>
     <AccessToken token={record.access_token}/>;
 AccessTokenField.defaultProps = { label: 'FB-Access-Token'};
 
-// export const PageCreate = (props) => {
-//     <Create {...props} redirect="list" >
-//         <SimpleForm>
-//             <TextInput label="Name" source="name" />
-//             <TextInput label="FB Page ID" source="facebookPageId" />
-//         </SimpleForm>
-//     </Create>
-// };

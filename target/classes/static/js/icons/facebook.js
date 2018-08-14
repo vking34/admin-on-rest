@@ -14,7 +14,7 @@ var _pure = require('recompose/pure');
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _SvgIcon = require('../../SvgIcon');
+var _SvgIcon = require('material-ui/SvgIcon');
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 

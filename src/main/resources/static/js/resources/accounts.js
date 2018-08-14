@@ -16,15 +16,17 @@ import {
     TextInput,
     Filter
 } from 'admin-on-rest';
-import {dateFormatter, dateParser} from "../functions/dateConverter";
 import MsgList from "../components/msgList";
 import CustomerList from "../components/customerList";
 import DeletePageButton from "../components/deletePageFromAccount";
+import AccessToken from "../fields/TokenField";
+import AccountLinkField from "../fields/LinkField";
 
 export const AccountList = (props) => (
     <List {...props} filters={<AccountFilter />}>
         <Datagrid>
-            <TextField label="ID" source="id"/>
+            {/*<TextField label="ID" source="id"/>*/}
+            <AccountLinkField />
             <TextField source="name"/>
             <TextField label="FB-User-ID" source="facebookUserId" />
             <EditButton />
@@ -39,18 +41,6 @@ const AccountFilter = (props) => (
     </Filter>
 );
 
-const AccountTitle = ( {record}) => {
-    return <span>Edit account: { record ? `${record.name}` : ''} </span>
-};
-
-const BizwebCustomerMapField = ({ record = {}} ) =>
-        <CustomerList customers={record.bizwebCustomerMaps ? record.bizwebCustomerMaps : null} />;
-BizwebCustomerMapField.defaultProps= { label: 'Bizweb Customer Maps'};
-
-const MessengerPlatformIdField = ({ record = {}} ) =>
-    <MsgList list={record.messengerPlatformIds} /> ;
-MessengerPlatformIdField.defaultProps= { label: 'Messenger Platform IDs'};
-
 export const AccountEdit = (props) => (
     <Edit title={<AccountTitle />} {...props}>
         {permissions =>
@@ -59,7 +49,7 @@ export const AccountEdit = (props) => (
                     <TextField label="ID" source="id"/>
                     <TextField label="Name" source="name"/>
                     <TextField label="FB-User-ID" source="facebookUserId"/>
-                    { permissions === 'ROLE_ADMIN' && <TextField label="access-token" source="accessToken"/>}
+                    { permissions === 'ROLE_ADMIN' && <AccessTokenField source="accessToken"/>}
                     <TextField label="Created On" source="createdOn"/>
                     <TextField label="Modified On" source="modifiedOn"/>
                     {/*<DateInput label="Created On" source="createdOn" format={dateFormatter} parse={dateParser} />*/}
@@ -90,6 +80,22 @@ export const AccountEdit = (props) => (
         }
     </Edit>
 );
+
+const AccountTitle = ( {record}) => {
+    return <span>Edit account: { record ? `${record.name}` : ''} </span>
+};
+
+const BizwebCustomerMapField = ({ record = {}} ) =>
+    <CustomerList customers={record.bizwebCustomerMaps ? record.bizwebCustomerMaps : null} />;
+BizwebCustomerMapField.defaultProps= { label: 'Bizweb Customer Maps'};
+
+const MessengerPlatformIdField = ({ record = {}} ) =>
+    <MsgList list={record.messengerPlatformIds} /> ;
+MessengerPlatformIdField.defaultProps= { label: 'Messenger Platform IDs'};
+
+const AccessTokenField = ({ record = {}} ) =>
+    <AccessToken token={record.accessToken} />;
+AccessTokenField.defaultProps= { label: 'Access Token'};
 
 // export const AccountCreate = (props) => {
 //     <Create {...props} redirect="list" >

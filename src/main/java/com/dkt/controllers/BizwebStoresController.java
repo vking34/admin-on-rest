@@ -70,28 +70,46 @@ public class BizwebStoresController {
     @PutMapping(value = "/{id}", consumes = "application/json", produces = "application/json")
     public resp updateStore(@PathVariable String id,@RequestBody Map<String, Object> info){
         System.out.println("UPDATE: Store " + id);
+        boolean valid = false;
         BizwebStore store = bizwebStoreRepository.findBizwebStoreById(id);
 
         if(store != null){
-            JSONObject json = new JSONObject(info);
-            String alias = json.getString("alias");
+                JSONObject json = new JSONObject(info);
 
-            if(bizwebStoreRepository.findBizwebStoreByAlias(alias) != null){
-                return new resp(false);
-            }
+                try{
+                    String alias = json.getString("alias");
+                    if(bizwebStoreRepository.findBizwebStoreByAlias(alias) == null && !store.getAlias().equals(alias)){
+                        store.setAlias(alias);
+                        valid = true;
+                    }
+                }
+                catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
 
-            if(!store.getAlias().equals(alias))
-                store.setAlias(alias);
+                try {
+                    Gson gson = new Gson();
+                    PackageInfo packageInfo = gson.fromJson(json.getJSONObject("packageInfo").toString(), PackageInfo.class);
+                    if(packageInfo.getPackageName() != null
+                            || packageInfo.getAdminLimit() != 0
+                            || packageInfo.getPageLimit() != 0
+                            || packageInfo.getScopes() != null){
+                        System.out.println("package != null");
+                        store.setPackageInfo(packageInfo);
+                        valid = true;
+                    }
+                    else {
+                        valid = false;
+                    }
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
 
-            Gson gson = new Gson();
-            PackageInfo packageInfo = gson.fromJson(json.getJSONObject("packageInfo").toString(), PackageInfo.class);
-            store.setPackageInfo(packageInfo);
-            bizwebStoreRepository.save(store);
-            return new resp(true);
+                if(valid){
+                    bizwebStoreRepository.save(store);
+                }
         }
-        else {
-            return new resp(false);
-        }
+        return new resp(valid);
     }
 
     @DeleteMapping("/{id}")

@@ -4,9 +4,9 @@ import myApiRestClient from './clientSide/restClient';
 import authClient from "./clientSide/authClient";
 import { UserCreate, UserEdit, UserList} from "./resources/users";
 import UsersIcon from "material-ui/svg-icons/social/people";
-import PagesIcon from "material-ui/svg-icons/social/facebook";
 import AccountIcon from "material-ui/svg-icons/social/person";
-import StoreIcon from "material-ui/svg-icons/social/store";
+import PagesIcon from "./icons/facebook";
+import StoreIcon from "./icons/store";
 import {
     BizwebStoreEdit,
     BizwebStoreList,

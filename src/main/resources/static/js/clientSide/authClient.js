@@ -4,7 +4,7 @@ import decodeJwt from 'jwt-decode';
 
 export default (type, params, location) => {
     if (type === AUTH_LOGIN) {
-        console.log(type, params, location);
+        // console.log(type, params, location);
         const { username, password } = params;
         const request = new Request('http://localhost/login', {
             method: 'POST',
@@ -23,7 +23,7 @@ export default (type, params, location) => {
             })
             .then(({ token }) => {
                 const decodedToken = decodeJwt(token);
-                console.log(decodedToken);
+                // console.log(decodedToken);
                 localStorage.setItem('token', token);
                 localStorage.setItem('role', decodedToken.jti);
             });

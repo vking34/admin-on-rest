@@ -32,9 +32,7 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
     switch (type){
 
         case GET_LIST : {
-
-            // console.log(typeof(resource));
-            console.log(type, resource , params);
+            // console.log(type, resource , params);
         
             let pageRequest = params.pagination.page - 1;
             if(typeof params.filter.q !== "undefined"){
@@ -62,21 +60,21 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         }
 
         case GET_ONE: {
-            console.log(type, resource, params);
+            // console.log(type, resource, params);
             url = `${API_URL}/${resource}/${params.id}`;
             break;
         }
 
         case GET_MANY_REFERENCE: {
             // console.log(type, resource, params);
+
             let pageRequest = params.pagination.page - 1;
             url = `${API_URL}/${params.target}/${params.id}/${resource}?page=${pageRequest}`;
-
             break;
         }
 
         case CREATE: {
-            console.log(type, resource, params);
+            // console.log(type, resource, params);
 
             url = `${API_URL}/${resource}`;
             options.method = 'POST';
@@ -85,11 +83,10 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
         }
 
         case UPDATE: {
+            // console.log(type, resource, params);
 
-            console.log(type, resource, params);
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'PUT';
-
             var payload = {};
 
             switch (resource){
@@ -116,13 +113,14 @@ const convertRESTRequestToHTTP =  (type, resource, params) => {
                     return {url, options};
             }
 
-            console.log(payload);
+            // console.log(payload);
             options.body = JSON.stringify(payload);
             break;
         }
 
         case DELETE: {
-            console.log(type, resource, params);
+            // console.log(type, resource, params);
+
             url = `${API_URL}/${resource}/${params.id}`;
             options.method = 'DELETE';
             break;
@@ -150,8 +148,9 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
         }
 
         case GET_MANY_REFERENCE : {
-            console.log(type, resource, params);
-            console.log(json);
+            // console.log(type, resource, params);
+            // console.log(json);
+
             return json
             ? {
               data : json.content.map(x => {
@@ -164,7 +163,7 @@ const convertHTTPResponseToREST = (response, type, resource, params) => {
 
         case CREATE:
         {
-            console.log(json);
+            // console.log(json);
             if(json.status === true){
                 return { data: { ...params.data, id: params.data.username } };
             } else{
