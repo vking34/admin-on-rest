@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
 import { refreshView, showNotification as showNotificationAction } from 'admin-on-rest';
 import { push as pushAction } from 'react-router-redux';
+import ActionDelete from 'material-ui/svg-icons/action/delete';
+import FlatButton from 'material-ui/FlatButton';
 
 class DeleteAccountButton extends Component {
 
@@ -36,7 +37,13 @@ class DeleteAccountButton extends Component {
     };
 
     render() {
-        return <RaisedButton label="Delete" onClick={this.handleClick} />;
+        return <FlatButton
+            secondary
+            label="Delete"
+            icon={<ActionDelete />}
+            onClick={this.handleClick}
+            style={{ overflow: 'inherit' }}
+        />;
     }
 }
 

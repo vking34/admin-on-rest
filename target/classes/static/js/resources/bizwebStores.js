@@ -24,17 +24,8 @@ import {
 import AccessToken from "../fields/TokenField";
 import PagesField from "../fields/PagesField";
 import ChannelsField from "../fields/ChannelsField";
-import DeleteAccountButton from "../components/deleteAccountFromStore";
-import DeletePageButton from "../components/deletePageFromStore";
-import StoreLinkField from "../fields/LinkField";
-import PageLinkField from "../fields/LinkField";
-import AccountLinkField from "../fields/LinkField";
-
-const cardActionStyle = {
-    zIndex: 2,
-    display: 'inline-block',
-    float: 'right',
-};
+import InnerDeleteButton from "../components/deleteButton";
+import LinkField from "../fields/LinkField";
 
 export const BizwebStoreList = (props) => (
     <List {...props} filters={<BizwebStoreFilter/>}>
@@ -42,7 +33,7 @@ export const BizwebStoreList = (props) => (
             <Datagrid>
                 <StoreLinkField/>
                 <TextField source="alias"/>
-                { permissions === 'ROLE_ADMIN' && <TextField label="api-access-token" source="apiAccessToken"/>}
+                { permissions === 'ROLE_ADMIN' && <TextField label="api_access_token" source="apiAccessToken"/>}
                 <EditButton/>
                 { permissions === 'ROLE_ADMIN' && <DeleteButton/> }
             </Datagrid>
@@ -90,13 +81,11 @@ export const BizwebStoreEdit = (props) => (
             <FormTab label="Pages">
                 <ReferenceManyField addLabel={false} reference="pages" target="bizweb-stores">
                     <Datagrid>
-                        {/*<TextField label="ID" source="id"/>*/}
                         <PageLinkField />
                         <TextField source="name"/>
-                        <TextField label="FB-Page-ID" source="facebookPageId" />
+                        <TextField label="FB_Page_ID" source="facebookPageId" />
                         <BooleanField label="Used" source="used" />
-                        <EditButton />
-                        { permissions === 'ROLE_ADMIN' && <DeletePageButton />}
+                        { permissions === 'ROLE_ADMIN' && <InnerDeleteButton channel="bizweb-stores" target="pages"/>}
                     </Datagrid>
                 </ReferenceManyField>
             </FormTab>
@@ -105,11 +94,9 @@ export const BizwebStoreEdit = (props) => (
                 <ReferenceManyField addLabel={false} reference="accounts" target="bizweb-stores">
                     <Datagrid>
                         <AccountLinkField />
-                        {/*<TextField label="Account ID" source="id"/>*/}
-                        <TextField label="Account Name" source="accountName"/>
+                        <TextField label="Account_Name" source="accountName"/>
                         <PagesField />
-                        <EditButton />
-                        { permissions === 'ROLE_ADMIN' && <DeleteAccountButton />}
+                        { permissions === 'ROLE_ADMIN' && <InnerDeleteButton channel="bizweb-stores" target="accounts"/>}
                     </Datagrid>
                 </ReferenceManyField>
             </FormTab>
@@ -126,6 +113,19 @@ const BizwebStoreTitle = ( {record}) => {
 const AccessTokenField = ({ record = {}} ) =>
     <AccessToken token={record.fbUserAccessToken} />;
 AccessTokenField.defaultProps= { label: 'User Access Token'};
+
+const StoreLinkField = ({ record = {}}) =>
+    <LinkField channel="bizweb-stores" id={record.id} />;
+StoreLinkField.defaultProps = { label: 'ID'};
+
+const PageLinkField = ({ record = {}}) =>
+    <LinkField channel="pages" id={record.id} />;
+PageLinkField.defaultProps = { label: 'ID'};
+
+const AccountLinkField = ({ record = {}}) =>
+    <LinkField channel="accounts" id={record.id} />;
+AccountLinkField.defaultProps = {label: 'ID'};
+
 
 
 // export const BizwebStoreCreate = (props) => {

@@ -16,11 +16,12 @@ import {
     Filter
 } from 'admin-on-rest';
 // import UserCreateToolbar from "../components/userCreateToolbar";
+import LinkField from "../fields/LinkField";
 
 export const UserList = (props) => (
     <List {...props} filters={<UsersFilter />}>
         <Datagrid>
-            <TextField source="id" />
+            <UserLinkField />
             <TextField source="username" />
             <BooleanField source="admin" />
             <BooleanField source="active" />
@@ -63,3 +64,7 @@ export const UserCreate = (props) => (
         </SimpleForm>
     </Create>
 );
+
+const UserLinkField = ({ record = {}}) =>
+    <LinkField channel="users" id={record.id} />;
+UserLinkField.defaultProps = {label: 'ID'};

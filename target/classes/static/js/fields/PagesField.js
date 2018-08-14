@@ -15,7 +15,8 @@ const PagesField = ({ record }) => (
 
 PagesField.defaultProps = {
     addLabel: true,
-    source: 'pagesName',
+    label: 'Page_Names',
+    source: 'pagesName'
 };
 
 export default PagesField;

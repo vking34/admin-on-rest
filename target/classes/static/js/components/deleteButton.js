@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
 import { refreshView, showNotification as showNotificationAction } from 'admin-on-rest';
+import ActionDelete from 'material-ui/svg-icons/action/delete';
+import FlatButton from 'material-ui/FlatButton';
+// import translate from 'admin-on-rest/src/i18n/translate';
 
 
-class DeleteAccountButton extends Component {
+class InnerDeleteButton extends Component {
 
     handleClick = () => {
 
         const { push, record, showNotification, refreshView } = this.props;
-        console.log(record);
+        console.log(this.props);
 
-        fetch(`/pages/${record.parent}/accounts/${record.id}`,
+        fetch(`/${this.props.channel}/${record.parent}/${this.props.target}/${record.id}`,
             {
                 method: 'DELETE',
                 headers: {
@@ -24,27 +26,39 @@ class DeleteAccountButton extends Component {
             .then(resp => resp.json())
             .then((resp) => {
                 if(resp.status === true){
-                    showNotification('Deleted Account');
+                    showNotification('Deleted', 'warning');
+                    // alert('Deleted');
+                    // push(`/bizweb-stores/${record.parent}`);
                     refreshView();
                 }
                 else {
-                    showNotification('Cant delete');
+                    // alert('Cant delete');
+                    showNotification('Cant delete', 'warning');
                 }
             });
 
     };
 
     render() {
-        return <RaisedButton label="Delete" onClick={this.handleClick} />;
+        return <FlatButton
+            secondary
+            label="Delete"
+            icon={<ActionDelete />}
+            onClick={this.handleClick}
+            style={{ overflow: 'inherit' }}
+        />;
     }
 }
 
-DeleteAccountButton.propTypes = {
+InnerDeleteButton.propTypes = {
     record: PropTypes.object,
     showNotification: PropTypes.func,
+    channel: PropTypes.string,
+    target: PropTypes.string
 };
 
 export default connect(null, {
     showNotification: showNotificationAction,
     refreshView: refreshView
-})(DeleteAccountButton);
+})(InnerDeleteButton);
+

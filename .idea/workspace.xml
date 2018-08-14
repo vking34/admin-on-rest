@@ -263,7 +263,7 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="TokenField.js" pinned="false" current-in-tab="true">
+            <file leaf-file-name="TokenField.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/TokenField.js">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="234">
@@ -275,8 +275,17 @@
             <file leaf-file-name="bizwebStores.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="540">
-                    <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+                  <state relative-caret-position="354">
+                    <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="44" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="pages.js" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="566">
+                    <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
                     <folding>
                       <element signature="e#0#26#0" expanded="true" />
                     </folding>
@@ -284,11 +293,38 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="LinkField.js" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js">
+            <file leaf-file-name="accounts.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="504">
-                    <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+                  <state relative-caret-position="570">
+                    <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+                    <folding>
+                      <element signature="e#0#26#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/users.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="528">
+                    <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+                    <folding>
+                      <element signature="e#0#26#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="deleteAccountFromStore.js" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromStore.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="600">
+                    <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+                    <folding>
+                      <element signature="e#0#41#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -300,38 +336,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TokenGridField.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/TokenGridField.js">
+      <file leaf-file-name="deleteButton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="117" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accounts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pages.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userCreateToolbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/userCreateToolbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="395">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -342,8 +351,8 @@
       <file leaf-file-name="restClient.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="-2880">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#0#176#0" expanded="true" />
               </folding>
@@ -351,55 +360,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
+      <file leaf-file-name="LinkField.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
-              <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authClient.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -420,7 +385,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>department_list</find>
       <find>employee_list</find>
       <find>input</find>
       <find>PostMapping</find>
@@ -449,6 +413,8 @@
       <find>saving</find>
       <find>StoreLinkField</find>
       <find>console</find>
+      <find>UserLinkField</find>
+      <find>AccountLinkField</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -465,10 +431,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/deletePageFromAccount.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/PagesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/passingObjects/Oid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/Acc.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/test/PasswordEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/models/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/Dashboard.js" />
@@ -488,7 +450,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/css/FieldStyles.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/css/FieldStyle.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/PagesField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/ChannelsField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/css/StoreIcon.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/css/store.js" />
@@ -499,10 +460,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/UserEditToolbar.js" />
         <option value="$PROJECT_DIR$/node_modules/admin-on-rest/src/mui/button/CreateUserButton.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/userEditToolbar.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromPage.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/userCreateButton.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/userCreateToolbar.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/users.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/tokenGridField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/components/tokenField.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/icons/facebook.js" />
@@ -512,9 +471,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/test/TimeoutTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/PagesField.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromPage.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromStore.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/components/deleteButton.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/users.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js" />
       </list>
     </option>
@@ -551,7 +517,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
@@ -564,8 +530,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -662,6 +628,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dkt" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-spring-mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dkt" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-spring-mvc" type="b2602c69:ProjectViewProjectNode" />
@@ -839,6 +814,17 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="TimeoutTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dkt.test.TimeoutTest" />
+      <module name="SpringREST" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dkt.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -888,9 +874,11 @@
     <list>
       <item itemvalue="Spring Boot.rest-api" />
       <item itemvalue="Application.PasswordEncoder" />
+      <item itemvalue="Application.TimeoutTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TimeoutTest" />
         <item itemvalue="Application.PasswordEncoder" />
       </list>
     </recent_temporary>
@@ -996,12 +984,13 @@
       <workItem from="1534043308792" duration="8100000" />
       <workItem from="1534131887408" duration="3942000" />
       <workItem from="1534141799559" duration="9478000" />
-      <workItem from="1534219286772" duration="4237000" />
+      <workItem from="1534219286772" duration="4324000" />
+      <workItem from="1534229689516" duration="6475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="560239000" />
+    <option name="totallyTimeSpent" value="566801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,7 +1002,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="960" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1031,7 +1020,7 @@
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32858709" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.18803419" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.37828946" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32894737" />
       <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
       <window_info id="Structure" order="1" sideWeight="0.50731707" side_tool="true" weight="0.30482456" />
@@ -1046,22 +1035,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Logcat" order="11" />
       <window_info anchor="right" id="Preview" order="6" />
-      <window_info anchor="bottom" id="Java Enterprise" order="17" />
+      <window_info id="Captures" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.40285715" />
-      <window_info id="Captures" order="8" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.32885906" />
       <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.12288135" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Java Enterprise" order="17" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.12288135" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5191676" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32858709" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="16" weight="0.32909605" />
@@ -1069,35 +1058,35 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.25629792" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24893162" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Web" order="9" side_tool="true" />
+      <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info id="Favorites" order="6" sideWeight="0.5020161" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
+      <window_info id="Captures" order="8" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3274918" />
       <window_info anchor="right" id="Preview" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="right" id="Device File Explorer" order="7" side_tool="true" />
-      <window_info id="Captures" order="8" />
       <window_info anchor="bottom" id="Java Enterprise" order="17" />
       <window_info anchor="bottom" id="Logcat" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32879817" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32909605" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.32885906" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.17895299" />
-      <window_info anchor="right" id="Database" order="9" weight="0.12885906" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3274918" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32858709" />
+      <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info id="Structure" order="1" sideWeight="0.50731707" side_tool="true" weight="0.30482456" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5191676" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.40285715" />
     </layout-to-restore>
@@ -1139,29 +1128,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/StoreAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/BizwebStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/AccountMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/examples/Department_REST_API.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/models/Acc.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
@@ -1303,21 +1269,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/PagesField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/admin-on-rest/src/mui/button/CreateUserButton.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/icons/facebook.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1339,20 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/userCreateButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="6" selection-start-line="4" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/BizwebStoresController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-943">
@@ -1365,19 +1303,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/controllers/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="90">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/authClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
+        <state relative-caret-position="450">
           <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
@@ -1389,20 +1325,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1413,61 +1339,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/userCreateToolbar.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="378">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/JWTAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="486">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/test/TimeoutTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="341">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/userCreateToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deletePageFromAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-321">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/bizwebStores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteAccountFromPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/userCreateButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/PagesField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dkt/configs/SecurityConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/clientSide/restClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="-2880">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#0#176#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/components/deleteButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="528">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/App.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/pages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="566">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Login.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/fields/LinkField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="198">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/resources/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

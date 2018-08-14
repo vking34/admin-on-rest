@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import { refreshView, showNotification as showNotificationAction } from 'admin-on-rest';
 
+
 class DeleteAccountButton extends Component {
 
     handleClick = () => {

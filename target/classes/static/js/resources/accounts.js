@@ -16,12 +16,11 @@ import {
     TextInput,
     Filter
 } from 'admin-on-rest';
-import {dateFormatter, dateParser} from "../functions/dateConverter";
 import MsgList from "../components/msgList";
 import CustomerList from "../components/customerList";
 import DeletePageButton from "../components/deletePageFromAccount";
 import AccessToken from "../fields/TokenField";
-import AccountLinkField from "../fields/LinkField";
+import LinkField from "../fields/LinkField";
 
 export const AccountList = (props) => (
     <List {...props} filters={<AccountFilter />}>
@@ -60,11 +59,9 @@ export const AccountEdit = (props) => (
                 <FormTab label="Page_Maps">
                     <ReferenceManyField addLabel={false} reference="pages" target="accounts">
                         <Datagrid>
-                            <TextField label="ID" source="id"/>
+                            <PageLinkField/>
                             <TextField source="name"/>
-                            <TextField label="FB-Page-ID" source="facebookPageId"/>
-                            <EditButton/>
-                            <DeletePageButton/>
+                            <TextField label="FB_Page_ID" source="facebookPageId"/>
                         </Datagrid>
                     </ReferenceManyField>
                 </FormTab>
@@ -97,6 +94,14 @@ MessengerPlatformIdField.defaultProps= { label: 'Messenger Platform IDs'};
 const AccessTokenField = ({ record = {}} ) =>
     <AccessToken token={record.accessToken} />;
 AccessTokenField.defaultProps= { label: 'Access Token'};
+
+const PageLinkField = ({ record = {}}) =>
+    <LinkField channel="pages" id={record.id} />;
+PageLinkField.defaultProps = { label: 'ID'};
+
+const AccountLinkField = ({ record = {}}) =>
+    <LinkField channel="accounts" id={record.id} />;
+AccountLinkField.defaultProps = {label: 'ID'};
 
 // export const AccountCreate = (props) => {
 //     <Create {...props} redirect="list" >

@@ -17,7 +17,7 @@ import {
     ReferenceManyField
 } from 'admin-on-rest';
 import AccessToken from "../fields/TokenGridField";
-import PageLinkField from "../fields/LinkField";
+import LinkField from "../fields/LinkField";
 
 export const PageList = (props) => (
     <List {...props} filters={<PageFilter/>}>
@@ -56,10 +56,10 @@ export const PageEdit = (props) => (
                 <FormTab label="account_maps">
                     <ReferenceManyField addLabel={false} reference="accounts" target="pages">
                         <Datagrid>
-                            <TextField label="ID" source="id"/>
+                            <AccountLinkField/>
                             <TextField source="name"/>
                             { permissions === 'ROLE_ADMIN' && <AccessTokenField source="access_token"/>}
-                            <EditButton/>
+                            {/*<EditButton/>*/}
                             {/*{ permissions === 'ROLE_ADMIN' && <DeleteAccountButton/>}*/}
                         </Datagrid>
                     </ReferenceManyField>
@@ -77,3 +77,10 @@ const AccessTokenField = ({ record = {} }) =>
     <AccessToken token={record.access_token}/>;
 AccessTokenField.defaultProps = { label: 'FB-Access-Token'};
 
+const PageLinkField = ({ record = {}}) =>
+    <LinkField channel="pages" id={record.id} />;
+PageLinkField.defaultProps = { label: 'ID'};
+
+const AccountLinkField = ({ record = {}}) =>
+    <LinkField channel="accounts" id={record.id} />;
+AccountLinkField.defaultProps = {label: 'ID'};
